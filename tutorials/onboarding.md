@@ -8,7 +8,6 @@ Onboarding steps:
 - [Ubuntu Desktop workstation](#linux-operating-system)
 - [PyCharm (or any other alternative)](#pycharm)
 - [Clone the course repo](#clone-the-course-repository-into-pycharm)
-- [Create virtualenv](#create-a-python-virtual-environment) 
 
 ## GitHub
 
@@ -19,57 +18,54 @@ Each project on GitHub is stored in something called a **Git repository**, or **
 A Git repository is like a folder that contains all the files and resources related to a project.
 These files can include code, images, documentation, and more.
 
-The content of this course, including all code files, tutorials, and project, are also stored and provided to you as a Git repo.
+The content of this course, including all code files, tutorials, and projects, are also stored and provided to you as a Git repo.
 
-Create [GitHub account](https://github.com/) if you haven't already.
+If you haven't already, please create a [GitHub account](https://github.com/).
 
 ## Linux Operating System
 
-Throughout the course you'll use the Linux Operating System (**OS**). No Windows here...
+In this course, we'll be using the Linux Operating System (**OS**). Windows won't be part of the party...
 
-There exist many different [distributions of Linux](https://en.wikipedia.org/wiki/Linux_distribution). 
-We will use **Ubuntu**, which is a user-friendly Linux distribution known for its stability, security, and vast community support. 
+Linux comes in various [distributions](https://en.wikipedia.org/wiki/Linux_distribution). 
+We will be using **Ubuntu**, a widely-recognized Linux distribution known for its user-friendliness, stability, and extensive community support. 
 
-The course content was written and tested with **Ubuntu 20.04** or **22.04**, 
-we recommend using either of these versions for the best experience.
+The course materials were developed and tested with **Ubuntu 22.04** and **24.04**.
+For the optimal experience, we recommend using one of these versions.
 
-Below you'll find various ways to install Ubuntu.
+Below are the methods to install Ubuntu based on your preference:
 
-### Virtualized Ubuntu using VirtualBox
+#### Virtualized Ubuntu using Hyper-V Manager (Windows Users)
 
-A common way to set up Ubuntu is to install it on a virtual machine (VM), on top of your existed Windows installation.
+For Windows users, an effective way to run Ubuntu is by installing it on a virtual machine (VM) using **Hyper-V Manager**.
+This allows you to run Ubuntu alongside your Windows system without altering your existing setup.
 
-There are many different virtualization platforms such as VMWere or VirtualBox. 
+Hyper-V Manager is a built-in virtualization platform for Windows 10 Pro, Enterprise, and Education editions.
 
-VirtualBox offers a free virtual machine license for personal, educational, or evaluation use.
+Follow this tutorial to set up Ubuntu on Hyper-V Manager:   
+https://ubuntu.com/server/docs/how-to-set-up-ubuntu-on-hyper-v
 
-VM requirements:
+Ensure your VM has at least **12GB of RAM** and **80GB of disk space**.
 
-- At least 8GB of RAM.
-- At least 80GB disk space.
+#### Virtualized Ubuntu using VirtualBox
 
-Follow the below tutorial:   
+Alternatively, you can set up Ubuntu using **VirtualBox**, another popular virtualization platform. 
+VirtualBox offers a free license for personal, educational, and evaluation use.
+
+Follow this guide to install Ubuntu using VirtualBox:   
 https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox
 
-In addition, enable clipboard sharing between your Windows and the Ubuntu VM:   
-https://linuxhint.com/enable-copy-paste-virtualbox-host/
+Ensure your VM has at least **12GB of RAM** and **80GB of disk space**.
 
+#### Native Ubuntu Installation
 
-### Native Ubuntu
+For those who prefer a more integrated experience, you can install Ubuntu directly on your machine, either as your primary OS or alongside an existing Windows installation.
 
-Another recommended way is to install Ubuntu Desktop directly on your machine, without a virtualization layer. 
-You can have Ubuntu as your primary OS, or choose to install it next to an existing Windows installation. 
-
-To install Ubuntu as your primary OS:    
+To install Ubuntu as your primary OS:   
 https://ubuntu.com/tutorials/install-ubuntu-desktop
-
-
-To install Ubuntu along with your existed Windows:   
-https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/
 
 ## Git
 
-**Git** is a version control system (**VCS**), it allows a team to collaborate on the same code project, and save different versions of the code without interfering each other.  
+**Git** is a Version Control System (**VCS**), it allows a team to collaborate on the same code project, and save different versions of the code without interfering each other.  
 Git is the most popular VCS, you'll find it in almost every software project. 
 
 On your Ubuntu, install Git form: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
@@ -79,43 +75,32 @@ Git is the tool used for managing the source code on your local machine, while G
 
 ## PyCharm
 
-PyCharm is an Integrated Development Environment (**IDE**) software for code development, with Python as the primary programming language. 
+PyCharm is an **Integrated Development Environment (IDE)** software for code development, with Python as the primary programming language. 
 
 The course's content was written with PyCharm as the preferred IDE. 
 
 You can use any other IDE of your choice (e.g. VSCode), but keep in mind that you may experience some differences in functionality and workflow compared to PyCharm.
-Furthermore, when it comes to Python programming, PyCharm reigns supreme - unless you enjoy arguing with your tools! 
+Furthermore, when it comes to Python programming, PyCharm reigns supreme - unless you enjoy arguing with your tools...
 
 > [!NOTE]
 > The last sentence was generated by ChatGPT. For me there is nothing funny in PyCharm vs VSCode debate.
 
-On your Ubuntu, install PyCharm community from: https://www.jetbrains.com/pycharm/download/#section=linux (scroll down for community version).
+On your Ubuntu, install **PyCharm Community** from: https://www.jetbrains.com/pycharm/download/#section=linux (scroll down for community version).
 
 ### Clone the course repository into PyCharm
 
 Cloning a GitHub project creates a local copy of the repository on your local computer.
 
-To clone our GitHub repository, open up a Terminal window (Press Ctrl+Alt+T), and execute the below command:
+You'll clone the repository using PyCharm UI:
 
-```bash
-git clone https://github.com/alonitac/DevOpsFursa24
-```
+1. Open PyCharm. 
+    - If no project is currently open, click **Get from VCS** on the Welcome screen.
+    - If your PyCharm is opened of some existing project, go to **Git | Clone** (or **VCS | Get from Version Control**).
 
-Git will create a new directory named `DevOpsFursa24` in your current working directory.
-
-Then, open the project via Pycharm, as follows: 
-
-1. Open PyCharm.
-1. If you are already in a project, you can close it by going to **File** > **Close Project**.
-1. In the welcome screen, click on **Open**.
-1. Select the `DevOpsFursa24` directory and click **Open**.
+2. In the **Get from Version Control** dialog, specify `https://github.com/alonitac/DevOpsBootcampUPES24`, the URL of our GitHub repository. 
+2. If you are not yet authenticated to GitHub, PyCharm will offer different types of authentication methods. 
+   We suggest to choose the **Use Token** option, and click the **Generate** button in order to generate an authentication token in GitHub. 
+   After the token was generated in GitHub website, copy the token to the designated place in PyCharm. 
+3. In the **Trust and Open Project** security dialog, select **Trust Project**. 
 
 At the end, you should have an opened PyCharm project with all the files and folders from the cloned GitHub repository, ready for you to work with.
-
-### Create a Python virtual environment
-
-It is a good practice to create an isolated Python virtual environment per project. 
-This ensures that any Python dependencies or libraries installed will only affect this project, keeping your system clean and organized. 
-
-In the opened PyCharm project, [configure a new Python virtual environment](https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html).
-
