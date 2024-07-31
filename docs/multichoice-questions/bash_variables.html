@@ -1,0 +1,207 @@
+
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>
+    Bash - Variables - multichoice questions
+    </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="github-markdown-css.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+    
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+            
+            .floating-button {
+              position: fixed;
+              bottom: 20px; /* Adjust the distance from the bottom as needed */
+              right: 20px; /* Adjust the distance from the right as needed */
+              z-index: 9999; /* Ensure the button appears above other elements */
+            }
+        </style>
+        <script>
+            const solutions = {'1': 'e9126f469646506b8e82b4214d075bf72d9d324d357650ba670ed6f6fbbf2a75', '2': '451ea98fe45ef0d6db24baeaf4dd2bb5fd8334971b6c889fe06ec2c702d0069a', '3': '718e63b74c9642e18a4ddf68a5b25344aafc357e18d0e31c22365d5547ac33f5', '4': '2fd0fcaa97438af987430e8bf091615c72e043b3ebd99b03fa8b6c9823fdfc89', '5': '92712b534e6b4da89c934cb9d6a0f2d5f003171971265516561889b9d5e16fed', '6': '7b0d98ba3f8ae23c2528e416af35b59a1dfd9fa66a0e8fceb978058795151075', '7': '6a08e67c23edf34315f3feef21c7bf0bb4588dc3ec89c484476d1240fd087315', '8': '0341e46110b17a9831d9fe6e5261362797d1b46d4c8a2b4f91a60f603d8f88e3', '9': '089bee9c3b8caace8c024042fcfc73b80cf857a77bbb82a680f218cba1726aaf', '10': '4c1d77cf5e1123c03e8cbe8e01dcdeb6d4b146ca1d6c157fdf312d42713c3ea6'}
+        </script>
+    </head>
+    <body>
+    
+    <article class="markdown-body">  
+        
+            <p>
+            <a href="https://github.com/exit-zero-academy/DevOpsTheHardWay">DevOpsTheHardWay</a><br>
+            </p>
+            
+
+    <h1>Bash - Variables - multichoice questions</h1>
+<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+<h2>Question 1</h2>
+<p>Which of the following commands would append the directory <code>/opt/bin</code> to the current value of the <code>PATH</code> environment variable?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>PATH=$PATH:/opt/bin</code></li>
+<li><input type="checkbox"> <code>PATH+=/opt/bin</code></li>
+<li><input type="checkbox"> <code>PATH=${PATH}+"/opt/bin"</code></li>
+<li><input type="checkbox"> A and B</li>
+<li><input type="checkbox"> All of the above</li>
+</ul>
+<h2>Question 2</h2>
+<p>Which of the following commands would create a file called <code>jan_reports.txt</code>?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>MONTH=jan; touch ${MONTH}_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH=jan; touch $MONTH_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH= jan; touch $MONTH_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH= jan; touch $"MONTH"_report.txt</code></li>
+<li><input type="checkbox"> A and B</li>
+</ul>
+<h2>Question 3</h2>
+<p>Which command would display the current shell’s process id (pid)?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>echo $$</code></li>
+<li><input type="checkbox"> <code>echo $!</code></li>
+<li><input type="checkbox"> <code>echo $PID</code></li>
+<li><input type="checkbox"> <code>echo $BASH_PID</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 4</h2>
+<p>Which of the following is not a feature of environment variables?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> All processes use environment variables, not just those running the bash shell.</li>
+<li><input type="checkbox"> Environment variables are inherited by child processes by default.</li>
+<li><input type="checkbox"> Upon startup, the bash shell clears all previously defined environment variables.</li>
+<li><input type="checkbox"> Environment variables can be examined using files found in the /proc filesystem.</li>
+<li><input type="checkbox"> Environment variables possess all these features.</li>
+</ul>
+<h2>Question 5</h2>
+<p>Which ones(s) of the following would correctly set the shell variable <code>ADDR</code> to <code>123_Elm_St.</code>?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>ADDR= 123_Elm_St.</code></li>
+<li><input type="checkbox"> <code>ADDR = 123_Elm_St.</code></li>
+<li><input type="checkbox"> <code>ADDR="123_Elm_St."</code></li>
+<li><input type="checkbox"> <code>ADDR=123_Elm_St.</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 6</h2>
+<p>The user elvis performs the following command:</p>
+<pre><code class="language-console">[elvis@station elvis]$ STYLE=terse
+</code></pre>
+<p>Which of the following commands could be used to examine the value of <code>STYLE</code>?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>set</code></li>
+<li><input type="checkbox"> <code>env</code></li>
+<li><input type="checkbox"> <code>cat /proc/$$/environ</code></li>
+<li><input type="checkbox"> <code>export</code></li>
+<li><input type="checkbox"> A and C</li>
+</ul>
+<h2>Question 7</h2>
+<p>Which of the following command lines would create a file called <code>make $ at home!</code>?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>touch "make $ at home"\!</code></li>
+<li><input type="checkbox"> <code>touch 'make $ at home!'</code></li>
+<li><input type="checkbox"> <code>touch 'make $'\ at\ home\!</code></li>
+<li><input type="checkbox"> A and C</li>
+<li><input type="checkbox"> All of the above</li>
+</ul>
+<h2>Question 8</h2>
+<p>What is the output of this code?</p>
+<pre><code class="language-bash">VAR=&quot;/var/www/html/website.com/html/&quot;
+echo &quot;${VAR#*/html}&quot;
+</code></pre>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>/website.com/html/</code></li>
+<li><input type="checkbox"> <code>/html/website.com/html/</code></li>
+<li><input type="checkbox"> <code>/var/www/html/website.com/</code></li>
+<li><input type="checkbox"> Nothing will be echoed on the screen.</li>
+</ul>
+<h2>Question 9</h2>
+<p>What is the output of this script?</p>
+<pre><code class="language-bash">#!/bin/bash
+fname=john
+john=thomas
+echo ${!fname}
+</code></pre>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> john</li>
+<li><input type="checkbox"> thomas</li>
+<li><input type="checkbox"> Syntax error</li>
+<li><input type="checkbox"> blank</li>
+</ul>
+<h2>Question 10</h2>
+<p>When used from within a script, which variable contains the name of the script?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>$0</code></li>
+<li><input type="checkbox"> <code>$#</code></li>
+<li><input type="checkbox"> <code>$$</code></li>
+<li><input type="checkbox"> <code>$@</code></li>
+</ul> 
+    
+        <script>
+    
+            function test(){
+                const studentSolution = {};
+    
+                $('ul').each(function (index) {
+                    if ($(this).find('input[type="checkbox"]').length > 0) {
+                      var ulElement = $(this);
+                      var qNum = ($('ul').index(ulElement) + 1) + '';
+
+                      var answerToken = '' + qNum;
+                      ulElement.find('li').each(function () {
+                        var isChecked = $(this).find('input').prop('checked');
+                        answerToken += isChecked ? '1' : '0';
+
+                      });
+
+                      var hashPromise  = crypto.subtle.digest('SHA-256', new TextEncoder().encode(answerToken))
+                        .then((hashBuffer) => {
+                          var hashArray = Array.from(new Uint8Array(hashBuffer));
+                          var hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+                          return hashHex;
+                        });
+    
+                      studentSolution[qNum] = hashPromise;
+    
+                    }
+                });
+    
+                Promise.allSettled(Object.values(studentSolution))
+                  .then(function (results) {
+                    results.forEach(function (result, i) {
+                       studentSolution[(i + 1) + ''] = result.value;
+                    });
+                }).then(function () {
+
+                    console.log(studentSolution)
+
+                    for (const i in studentSolution) {
+                      console.log('student solution' + studentSolution[i]);
+                      if (solutions[i] === studentSolution[i]) {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'green');
+                      } else {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'red');
+                      }
+                    }
+                });
+            }
+    
+        </script>
+    
+        <input type="button" class="floating-button" value="Test" onclick="test()">
+    
+    </article>    
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    </body>
+    </html>
+    
+    

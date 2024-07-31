@@ -1,0 +1,137 @@
+
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>
+    AWS - intro to cloud computing - multichoice questions
+    </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="github-markdown-css.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+    
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+            
+            .floating-button {
+              position: fixed;
+              bottom: 20px; /* Adjust the distance from the bottom as needed */
+              right: 20px; /* Adjust the distance from the right as needed */
+              z-index: 9999; /* Ensure the button appears above other elements */
+            }
+        </style>
+        <script>
+            const solutions = {'1': '8597f1e3043654da36e26467d59c6c6bbc9c44d498cc15ab2f91fc84440bbc35', '2': 'e4b8f2da99fd9407c758cd306f846562424ec5c38d320289f03c60b8437ed73d', '3': '7b877f650cb4fcb34cc421916b5138c382484e6ae5f9dcdb38817c87edd5f727'}
+        </script>
+    </head>
+    <body>
+    
+    <article class="markdown-body">  
+        
+            <p>
+            <a href="https://github.com/exit-zero-academy/DevOpsTheHardWay">DevOpsTheHardWay</a><br>
+            </p>
+            
+
+    <h1>AWS - intro to cloud computing - multichoice questions</h1>
+<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+<h2>Question 1</h2>
+<p>Visit the official SLA page of AWS. What is the percentage of availability of a service called S3, below which you deserve a 100% credit?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> &lt; 95.00%.</li>
+<li><input type="checkbox"> &lt; 99.00%.</li>
+<li><input type="checkbox"> &lt; 95.99%.</li>
+<li><input type="checkbox"> &lt; 100.00%.</li>
+</ul>
+<h2>Question 2</h2>
+<p>Your company guarantees to your customers an SLA of maximum of 800 millisecond (ms) to answer a request to your servers.
+You know that a set of 6 virtual machines meet this SLA.
+What architecture(s) ensures <strong>high availability</strong> and <strong>fault-tolerant</strong> operation of your service? (assume that AZs can, and may, experience an outage)</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> 6 VMs across two AZs.</li>
+<li><input type="checkbox"> 6 VMs across one AZs.</li>
+<li><input type="checkbox"> 12 VMs across two AZs.</li>
+<li><input type="checkbox"> 12 VMs across three AZs.</li>
+</ul>
+<h2>Question 3</h2>
+<p>One of your customers was concerned that their sensitive data could be compromised if your system is running on a shared physical hardware in AWS.
+They were worried that other customers sharing the same hardware could potentially access their data.</p>
+<p>How would you answer him?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> We will encrypt the disks</li>
+<li><input type="checkbox"> We will operate out service from a private network</li>
+<li><input type="checkbox"> It's AWS responsibility to allowed shared IaaS securely</li>
+<li><input type="checkbox"> We will run your account in a dedicated instance</li>
+</ul> 
+    
+        <script>
+    
+            function test(){
+                const studentSolution = {};
+    
+                $('ul').each(function (index) {
+                    if ($(this).find('input[type="checkbox"]').length > 0) {
+                      var ulElement = $(this);
+                      var qNum = ($('ul').index(ulElement) + 1) + '';
+
+                      var answerToken = '' + qNum;
+                      ulElement.find('li').each(function () {
+                        var isChecked = $(this).find('input').prop('checked');
+                        answerToken += isChecked ? '1' : '0';
+
+                      });
+
+                      var hashPromise  = crypto.subtle.digest('SHA-256', new TextEncoder().encode(answerToken))
+                        .then((hashBuffer) => {
+                          var hashArray = Array.from(new Uint8Array(hashBuffer));
+                          var hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+                          return hashHex;
+                        });
+    
+                      studentSolution[qNum] = hashPromise;
+    
+                    }
+                });
+    
+                Promise.allSettled(Object.values(studentSolution))
+                  .then(function (results) {
+                    results.forEach(function (result, i) {
+                       studentSolution[(i + 1) + ''] = result.value;
+                    });
+                }).then(function () {
+
+                    console.log(studentSolution)
+
+                    for (const i in studentSolution) {
+                      console.log('student solution' + studentSolution[i]);
+                      if (solutions[i] === studentSolution[i]) {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'green');
+                      } else {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'red');
+                      }
+                    }
+                });
+            }
+    
+        </script>
+    
+        <input type="button" class="floating-button" value="Test" onclick="test()">
+    
+    </article>    
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    </body>
+    </html>
+    
+    

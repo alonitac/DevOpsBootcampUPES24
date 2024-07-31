@@ -1,0 +1,187 @@
+
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>
+    Networking - SSH - multichoice questions
+    </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="github-markdown-css.css">
+        <style>
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+    
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+            
+            .floating-button {
+              position: fixed;
+              bottom: 20px; /* Adjust the distance from the bottom as needed */
+              right: 20px; /* Adjust the distance from the right as needed */
+              z-index: 9999; /* Ensure the button appears above other elements */
+            }
+        </style>
+        <script>
+            const solutions = {'1': '4c1d77cf5e1123c03e8cbe8e01dcdeb6d4b146ca1d6c157fdf312d42713c3ea6', '2': '451ea98fe45ef0d6db24baeaf4dd2bb5fd8334971b6c889fe06ec2c702d0069a', '3': '7b877f650cb4fcb34cc421916b5138c382484e6ae5f9dcdb38817c87edd5f727', '4': 'cfc30c6ec0237d3c822138d697d7e7736a1fefdf88066a670e7ffc17fe671084', '5': 'c9df3029c64e26aee3c3da7a34a1270de9557c091467c5b36aa7a28d48041118', '6': '7b0d98ba3f8ae23c2528e416af35b59a1dfd9fa66a0e8fceb978058795151075', '7': '617d73f7daa20be81d5318b14f24db980b0f1d4e5cd897355aa57c4bcaf2c6d3', '8': 'b2f7f8759dbf8d3530162a89dc6f1f4d9a1a9ac13d3a6a72409ffd96afa1a0a9'}
+        </script>
+    </head>
+    <body>
+    
+    <article class="markdown-body">  
+        
+            <p>
+            <a href="https://github.com/exit-zero-academy/DevOpsTheHardWay">DevOpsTheHardWay</a><br>
+            </p>
+            
+
+    <h1>Networking - SSH - multichoice questions</h1>
+<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+<h2>Question 1</h2>
+<p>In which file does SSH store a user's private RSA key, by default?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>~/.key.private</code></li>
+<li><input type="checkbox"> <code>~/.ssh/id_rsa</code></li>
+<li><input type="checkbox"> <code>~/.ssh/rsa</code></li>
+<li><input type="checkbox"> <code>~/.sshrc</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 2</h2>
+<p>When using SSH public key authentication, which file must exist on the remote machine?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>~/.ssh/authorized_keys</code></li>
+<li><input type="checkbox"> <code>~/.ssh/id_dsa.pub</code></li>
+<li><input type="checkbox"> <code>~/.ssh/known_hosts</code></li>
+<li><input type="checkbox"> A and C</li>
+<li><input type="checkbox"> All of the above</li>
+</ul>
+<h2>Question 3</h2>
+<pre><code class="language-console">[elvis@station]$ ssh ec2-user@69.57.97.126 &quot;echo 'hi' | grep h &gt; /tmp/greet&quot;
+</code></pre>
+<p>On the remote machine, which of the following processes was not executed as a result of this
+Command?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>echo</code></li>
+<li><input type="checkbox"> <code>grep</code></li>
+<li><input type="checkbox"> <code>ssh</code></li>
+<li><input type="checkbox"> All of the above processes are executed on the remote machine.</li>
+</ul>
+<h2>Question 4</h2>
+<pre><code class="language-console">[elvis@station]$ ssh ec2-user@69.57.97.126 &quot;echo 'hi' | grep h &gt; /tmp/greet&quot;
+</code></pre>
+<p>On which machine was the file /tmp/greet created?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> The local machine</li>
+<li><input type="checkbox"> The remote machine</li>
+<li><input type="checkbox"> Not enough information is provided.</li>
+</ul>
+<h2>Question 5</h2>
+<pre><code class="language-console">[elvis@statio]$ ssh ec2-user@69.57.97.126 mkdir tmp
+[elvis@statio]$ scp .bashrc jules@69.57.97.126:tmp/.bashrc
+100% |*****************************|    124  00:00
+</code></pre>
+<p>Which file on the remote machine contains a copy of the local file ~/.bashrc?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>~/.bashrc</code></li>
+<li><input type="checkbox"> <code>/tmp/.bashrc</code></li>
+<li><input type="checkbox"> <code>~/tmp/.bashrc</code></li>
+<li><input type="checkbox"> <code>~/tmp</code></li>
+<li><input type="checkbox"> Not enough information is provided.</li>
+</ul>
+<h2>Question 6</h2>
+<p>Which file is automatically updated whenever the first connection to a new host is accepted?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>~/.ssh/known_hosts</code></li>
+<li><input type="checkbox"> <code>~/.ssh/id_dsa.pub</code></li>
+<li><input type="checkbox"> <code>~/.ssh/authorized_keys</code></li>
+<li><input type="checkbox"> <code>~/.ssh/authorized_hosts</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 7</h2>
+<p>Which of the following command lines could be used to recursively copy the <code>~/backups</code>
+directory to a remote machine's <code>/tmp</code> directory?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>scp backups ec2-user@69.57.97.126:tmp</code></li>
+<li><input type="checkbox"> <code>scp -r backups ec2-user@69.57.97.126:/tmp</code></li>
+<li><input type="checkbox"> <code>scp -R /tmp/backups ec2-user@69.57.97.126:</code></li>
+<li><input type="checkbox"> <code>scp backups ec2-user@69.57.97.126:</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 8</h2>
+<p>In order to connect to a remote machine, which of the following information must exist in the remote machine?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> The client OS version</li>
+<li><input type="checkbox"> The client private key</li>
+<li><input type="checkbox"> The client home directory path</li>
+<li><input type="checkbox"> The client public key</li>
+</ul> 
+    
+        <script>
+    
+            function test(){
+                const studentSolution = {};
+    
+                $('ul').each(function (index) {
+                    if ($(this).find('input[type="checkbox"]').length > 0) {
+                      var ulElement = $(this);
+                      var qNum = ($('ul').index(ulElement) + 1) + '';
+
+                      var answerToken = '' + qNum;
+                      ulElement.find('li').each(function () {
+                        var isChecked = $(this).find('input').prop('checked');
+                        answerToken += isChecked ? '1' : '0';
+
+                      });
+
+                      var hashPromise  = crypto.subtle.digest('SHA-256', new TextEncoder().encode(answerToken))
+                        .then((hashBuffer) => {
+                          var hashArray = Array.from(new Uint8Array(hashBuffer));
+                          var hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+                          return hashHex;
+                        });
+    
+                      studentSolution[qNum] = hashPromise;
+    
+                    }
+                });
+    
+                Promise.allSettled(Object.values(studentSolution))
+                  .then(function (results) {
+                    results.forEach(function (result, i) {
+                       studentSolution[(i + 1) + ''] = result.value;
+                    });
+                }).then(function () {
+
+                    console.log(studentSolution)
+
+                    for (const i in studentSolution) {
+                      console.log('student solution' + studentSolution[i]);
+                      if (solutions[i] === studentSolution[i]) {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'green');
+                      } else {
+                        $("h2:contains('Question " + i + "'):first").css('color', 'red');
+                      }
+                    }
+                });
+            }
+    
+        </script>
+    
+        <input type="button" class="floating-button" value="Test" onclick="test()">
+    
+    </article>    
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    </body>
+    </html>
+    
+    
