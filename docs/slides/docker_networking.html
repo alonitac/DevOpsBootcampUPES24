@@ -34,16 +34,9 @@
   }
 </style>
 
-<a href="https://github.com/exit-zero-academy/DevOpsTheHardWay.git">DevOpsTheHardWay</a>
-
-These are the slides we use in class, you're welcome to explore them. Enjoy your learning journey!
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
 
 # Docker networking
 
-By Alon Itach
 
 Figures by: https://github.com/docker/labs
 
@@ -56,8 +49,6 @@ Figures by: https://github.com/docker/labs
 - Container networking background
 - Libnetwork and the CNM model
 - Bridge networks
-- Overlay networks
-- MACVLAN networks
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
@@ -141,67 +132,6 @@ Docker **bridge** networking enables containers on a single host to communicate 
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
-
-## The bridge driver
-
-- Docker is shipped with a default bridge network. If you don't specify container network, your container is connected to this bridge.
-- The bridge network interface is called **docker0**
-
-![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/docker_networking_dockerbridge2.png)
-
-
-</textarea></section>
-<section data-markdown  ><textarea data-template>
-
-You can create your own bridge network
-
-Let's see it in action...
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Multi-host networking - The overlay driver
-
-The **overlay** driver enables simple and secure multi-host networking
-
-- All containers on the overlay network can communicate, as if they are sharing the same machine.
-
-![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/docker_networking_overlay.png)
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-## Multi-host networking - The overlay driver
-
-
-- The overlay driver uses VXLAN technology to build the network
-- Containers are sharing the same IP subnet mask
-- The communication over the public network is secured
-
-![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/docker_networking_overlay2.png)
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-
-## Connecting container to an existing network - The MACVLAN driver
-
-MACVLAN is a networking driver in Docker that allows containers to be connected to virtual and physical machines on existing networks and VLANs.
-
-- Each container gets its own MAC and IP on the underlay network.
-- Containers are visible on the physical underlay network.
-- Gives containers direct access to the underlay network without port mapping and without a Linux bridge.
-
-</textarea></section>
-<section data-markdown  data-auto-animate><textarea data-template>
-
-
-## Connecting container to an existing network - The MACVLAN driver
-
-![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/docker_networking_macvlan.png)
-
-</textarea></section>
-<section data-markdown  data-background-color="aquamarine"><textarea data-template>
 
 
 # Thanks
