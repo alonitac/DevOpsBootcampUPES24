@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Introduction to Cloud Computing</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+[comment]: # (mdslides presentation.md --include media)
+
+[comment]: # (The list of themes is at https://revealjs.com/themes/)
+[comment]: # (The list of code themes is at https://highlightjs.org/)
+
+[comment]: # (markdown: { smartypants: true })
+
+<style type="text/css">
+  .reveal { 
+    font-size: 2.2em;
+  }
+
+  .reveal .code-wrapper code {
+    white-space: pre;
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+</style>
+
+
+# Introduction to Cloud Computing
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Today's agenda
+
+- On-premise vs Cloud environments
+- Amazon Web Services introduction
+- Regions and Availability zones
+- AWS shared responsibility model
+- Compliance
+- Different service models - IaaS, PaaS, SaaS
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### About this course
+
+- In-depth knowledge about the core services: AZs, Amazon Virtual Private Cloud (VPC), Amazon EC2 servers, ELB, AWS Auto Scaling, storage, networking, databases, AWS IAM, and security.
+- For the other services: what that service does, what the common use cases are for that service.
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_logo.png)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### The bad old days
+
+- Purchase your own infrastructure (weeks to months to be global)
+- Army of IT employees
+- Dealing with cooling, hardware failure, disaster recovery
+- Dealing with physical security
+- Dealing with real estate
+- Hidden costs (how many servers should I purchase?)
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_server1.png)
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Overview of Cloud Computing
+
+- [Amazon Web Services (AWS) provides a highly reliable, scalable, and low-cost infrastructure platform](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/aws-overview.pdf?did=wp_card&trk=wp_card)
+- Pay-as-you-go pricing model
+- No need to make large up-front investments in hardware and spend a lot of time managing that hardware
+- More than 200 services
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Overview of Cloud Computing
+
+While each organization experiences a unique journey to the cloud with numerous benefits, six advantages become apparent time and time again
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_cloudbenefits.png)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Global Infrastructure
+
+- AWS provides a highly available technology infrastructure platform with multiple locations worldwide.
+- These locations are composed of **Regions** and **Availability Zones**.
+- Each region has multiple, isolated locations known as Availability Zones.
+- Each AZ is also isolated, but the AZs in a region are:
+  - Physically separated within a typical metropolitan region
+  - Located in lower-risk flood plains
+  - Connected through low-latency links
+  - On-site backup generators
+  - Fed via different grids from independent utilities (when available)
+- By placing resources in separate AZ, your service is protected from a disruption impacting a single location
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### AWS the Shared Responsibility Model
+
+- Cloud security at AWS is the number one priority.
+- Built-in security architecture for visibility, auditability, controllability, and agility.
+- AWS are responsible for the security **of** the cloud, while allow to secure anything you deploy **in** the cloud. This called the [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+
+<img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_shared.png" width="80%">
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Compliance
+
+- Organizations retain complete control and ownership over the region in which their data is physically located, allowing them to meet regional compliance and data residency requirements.
+- https://aws.amazon.com/compliance/programs/
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_complience.png)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Service Models
+
+- Infrastructure as a Service (IaaS)
+- Platform as a Service (PaaS)
+- Software as a Service (SaaS)
+
+<img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_intro_service_models.png" width="80%">
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+
+# Elastic Cloud Compute (EC2)
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_ec2_logo.png)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+
+### Elastic Cloud Compute (EC2) overview
+
+
+- Reliable, secure, and almost infinite compute capability
+- Preconfigured templates for your instances, known as Amazon Machine Images (**AMI**s), that package the bits you need for your server (Linux and Windows)
+- Various configurations of CPU, memory, storage, and networking capacity for your instances, known as **instance types**
+- Persistent storage volumes for your data using Amazon Elastic Block Store (Amazon EBS), known as **Amazon EBS** volumes
+- A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using **security groups**
+- Natively integrated with most of the AWS services
+- Pay-as-you-go [pricing model](https://aws.amazon.com/ec2/pricing/on-demand/)
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Amazon Machine Images (AMI)
+
+An [Amazon Machine Image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) is a supported and maintained image provided by AWS that provides the information required to launch an instance.
+
+- Most common Linux and Windows distro images ready to use
+- You can launch an instance from an existing AMI, customize the instance (for example, install software on the instance), and then save this updated configuration as a custom AMI.
+- You can purchase AMIs from a third party, including AMIs that come with service contracts from organizations such as Red Hat.
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Instance types
+
+When you launch an instance, the [instance type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) that you specify determines the hardware of the host computer used for your instance.
+
+
+- Each instance type offers different compute, memory, and storage capabilities.
+- Instances are grouped in an instance family based on these capabilities.
+- Remember that your EC2 shares other resources of the host computer, with other AWS customers. If each instance on a host computer tries to use as much of one of these shared resources as possible, each receives an equal share of that resource.
+- If the host computer is underused, your instance can consume a **higher** share of that resource while it's available.
+- Amazon Web Services offers [previous generation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#previous-gen-instances) instance types for users who have optimized their applications around them, as well as then [current generation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#current-gen-instances) types.
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Instance types name
+
+Instance types are named based on their family (**c**), generation (**5**), additional capabilities (**n**), and size (**xlarge**).
+
+- Possible families are: General purpose, Compute optimized, Memory optimized, Storage optimized, Accelerated computing
+- The following are the additional capabilities indicated by the instance type names:
+  - a – AMD processors
+  - i – Intel processors
+  - d – Instance store volumes
+  - n – Network optimization
+  - b – Block storage optimization
+
+![](https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/aws_ec2_instance_name.png)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Networking and storage features
+
+When you select an instance type, this determines the networking and storage features that are available.
+
+- IPv6 is supported on all current generation instance types.
+- To maximize the networking and bandwidth performance of your instance type, you can do the following:
+  - Launch supported instance types into a cluster [placement group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
+  - Enable [enhanced networking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html).
+- To obtain additional, dedicated capacity for Amazon EBS I/O, you can launch some instance types as [EBS–optimized instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html).
+- The EBS volume persists independently for the life span of the instance. Three types of volumes:
+  - General purpose (SSD)
+  - Provisioned IOPS (PIOPS)
+  - Magnetic
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### EC2 Security
+
+- A [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) is a set of security credentials that you use to prove your identity when connecting to an instance. AWS stores the public key on your instance, and you store the private key.
+- A [security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html) acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic.
+- You can specify one or more security groups. If you don't specify a security group, AWS uses the default security group.
+- New and modified rules are automatically applied to all instances that are associated with the security group.
+- A security group is **default deny** and **stateful**.
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+
+# Thanks
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+
+
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+controls : true,
+keyboard : true,
+hash : false,
+respondToHashChanges : false,
+width : 1500,
+height : 1000,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
