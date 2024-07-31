@@ -27,7 +27,7 @@ Please make sure to thoroughly review the content, complete the multiple-choice 
  <td>Linux and Bash</td>
  <td><a href="tutorials/linux_intro.md">Linux intro</a></td>
  <td align="center"> </td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/linux_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_intro.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
  <td align="center">&nbsp;</td>
 </tr>
@@ -37,7 +37,7 @@ Please make sure to thoroughly review the content, complete the multiple-choice 
  <td>Linux and Bash</td>
  <td><a href="tutorials/linux_file_management.md">Linux file management</a></td>
  <td align="center">&nbsp;</td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_file_management.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/linux_file_management.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_file_management.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
  <td align="center">&nbsp;</td>
 </tr>
@@ -47,7 +47,7 @@ Please make sure to thoroughly review the content, complete the multiple-choice 
  <td>Linux and Bash</td>
  <td><a href="tutorials/linux_io_redirection.md">IO redirection</a></td>
  <td align="center">&nbsp;</td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_io_redirection.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/linux_io_redirection.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_io_redirection.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
  <td align="center">&nbsp;</td>
 </tr>
@@ -72,7 +72,7 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
  <td>Linux and Bash</td>
  <td><a href="tutorials/linux_processes.md">Processes</a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/linux_processes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_processes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/linux_processes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_processes.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -81,7 +81,7 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
  <td>Linux and Bash</td>
  <td><a href="tutorials/linux_environment_variables.md">Environment variables</a></td>
  <td align="center">&nbsp;</td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_environment_variables.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/linux_environment_variables.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_environment_variables.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -104,7 +104,7 @@ Netflix Movie Catalog API.<br><br></td></tr>
  <td>Networking</td>
  <td><a href="tutorials/networking_computer_nets.md">Computer networks</a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/networking_OSI_model.html.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/networking_computer_nets.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/networking_computer_nets.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/networking_computer_nets.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -113,7 +113,7 @@ Netflix Movie Catalog API.<br><br></td></tr>
  <td>Networking</td>
  <td><a href="tutorials/networking_http.md">HTTP protocol</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/networking_http.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/networking_http.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/networking_http.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -127,7 +127,7 @@ domain name.<br><br></td></tr>
  <td>Networking</td>
  <td><a href="tutorials/networking_ssh.md">SSH protocol</a></td>
  <td align="center">&nbsp;</td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/networking_ssh.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/networking_ssh.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
@@ -169,7 +169,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
  <td>Webservers</td>
  <td><a href="tutorials/webservers_nginx.md">Nginx webserver</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/webservers_nginx.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/webservers_nginx.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/webservers_nginx.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -213,7 +213,7 @@ availability of the NetflixMovieCatalog app.
  <td>Containers</td>
  <td><a href="tutorials/docker_intro.md">Docker intro</a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/docker_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
@@ -222,7 +222,7 @@ availability of the NetflixMovieCatalog app.
  <td>Containers</td>
  <td><a href="tutorials/docker_containers.md">Docker containers</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_containers.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_containers.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_containers.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -237,7 +237,7 @@ We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
  <td>Containers</td>
  <td><a href="tutorials/docker_images.md">Docker images</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_images.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_images.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_images.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -246,7 +246,7 @@ We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
  <td>Containers</td>
  <td><a href="tutorials/docker_networking.md">The Bridge network driver for containers</a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/docker_networking.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_networking.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_networking.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_networking.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -261,7 +261,7 @@ clone) that depends on the NetflixMovieCatalog API to serve content.
  <td>Containers</td>
  <td><a href="tutorials/docker_volumes.md">Docker volumes</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_volumes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_volumes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_volumes.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -270,7 +270,7 @@ clone) that depends on the NetflixMovieCatalog API to serve content.
  <td>Containers</td>
  <td><a href="tutorials/docker_compose.md">Docker compose</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/docker_compose.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_compose.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_compose.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
