@@ -130,48 +130,6 @@ In the above `ls -l /dev` command, instead of printing the output to the screen 
 So `grep` is searching and filtering on the output of the `ls` command. 
 In this example we are filtering lines containing the text `stdin` or `stdout`, we do it by the `stdin\|stdout` regular expressions.
 
-# Exercises
-
-### :pencil2: IO redirection basics
-
-1. Create a file called `fruits.txt` with the contents "apple banana cherry"
-2. Use `>` to write the contents of `fruits.txt` to a new file called `output.txt`.
-3. Use `>>` to append the contents of `fruits.txt` again to `output.txt`.
-4. Use `|` to pipe the output of cat `output.txt` to grep banana. How many times does banana appear?
-5. Use `grep` to search for APPLE (upper cases) in `output.txt`. Did the search succeed?
-6. Use `grep` to display all lines in `output.txt` that don't contain banana.
-
-### :pencil2: `grep` on file
-
-Create the file `~/bashusers.txt`, which contains lines from the `/etc/passwd` file which contain the text “/bin/bash”.
-
-### :pencil2: `grep` on file II
-
-Create the file `~/rules.txt`, which contains every line from the `/etc/rsyslog.conf` file which contains the text “file”, using a case insensitive search.
-(In other words, file, File, and files would all count as matches).
-
-
-### :pencil2: `grep` with line number and pipe
-
-Use the `grep` command and IO redirects only!
-
-Create the file `~/mayhemnum.txt`, which contains only the line number of the word “mayhem” from the file `/usr/share/dict/words`.
-
-
-### :pencil2: `grep` with regex
-
-Find the number of words in `/usr/share/dict/words` that contain at least three “a”s. E.g. traumata, takeaways, salaam
-
-### :pencil2: Regex
-
-Create a file containing some lines that you think would match the regular expression: `(^[0-9]{1,5}[a-zA-Z ]+$)|none` and some lines that you think would not match.
-Use `grep` to see if your intuition is correct.
-
-### :pencil2: Regex II
-
-Using `grep` command and regular expressions, list all files in your home directory that others can read or write to.
-
-
 
 
 [linux_ioredirect]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/linux_ioredirect.png

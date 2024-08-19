@@ -13,50 +13,39 @@ TBD
 
 ## Getting Ready for Bootcamp
 
-Please complete the course [Onboarding tutorial](tutorials/onboarding.md). Once done, you can move on to the studying guide below. 
+First, please complete the course [Onboarding tutorial](tutorials/onboarding.md).
 
-Please make sure to thoroughly review the content, complete the multiple-choice questions (MCQs), and finish all exercises provided in the below table **before the bootcamp begins**.
+Now review the 3 tutorials below about linux fundamentals and answer the corresponding quiz. 
+When done, please complete and submit the [Linux Mini Project](https://github.com/exit-zero-academy/LinuxMiniProject), **before the bootcamp begins**.
 
 
 <table width="100%">
-<tr><th>#</th><th>Topic</th><th>Tutorial</th><th colspan="3">&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;</th><th>Project</th></tr>
-
+<tr><th>#</th><th>Tutorial</th><th>Quiz</th></tr>
 
 <tr>
  <td>1</td>
- <td>Linux and Bash</td>
  <td><a href="tutorials/linux_intro.md">Linux intro</a></td>
- <td align="center"> </td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"><a href="tutorials/linux_intro.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
- <td align="center">&nbsp;</td>
 </tr>
 
 <tr>
  <td>2</td>
- <td>Linux and Bash</td>
  <td><a href="tutorials/linux_file_management.md">Linux file management</a></td>
- <td align="center">&nbsp;</td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_file_management.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"><a href="tutorials/linux_file_management.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
- <td align="center">&nbsp;</td>
 </tr>
 
 <tr>
  <td>3</td>
- <td>Linux and Bash</td>
  <td><a href="tutorials/linux_io_redirection.md">IO redirection</a></td>
- <td align="center">&nbsp;</td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_io_redirection.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"><a href="tutorials/linux_io_redirection.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
- <td align="center">&nbsp;</td>
 </tr>
 
 </table>
 
 ## Studying Guide
 
-Participating the bootcamp will provide you a very solid baseline for fundamental topics in DevOps. 
+The below content will be covered throughout the bootcamp.
+Participating in the bootcamp will provide you a very solid baseline for fundamental topics in DevOps. 
 
 Each tutorial is designed to be completed in approximately 1-1.5 hours of lesson time, followed by around 1-3 hours of exercises and job interview questions.
 
@@ -65,7 +54,7 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
 <table width="100%">
 <tr><th>#</th><th>Topic</th><th>Tutorial</th><th colspan="3">&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;</th></tr>
 
-<br><tr><td colspan="6" align="center"><br><b>Day 1 - Linux and bash alignment</b><br>In this day we will practice important concepts in Linux OS.<br><br></td></tr>
+<br><tr><td colspan="6" align="center"><br><b>Linux and bash alignment</b><br>In this day we will practice important concepts in Linux OS.<br><br></td></tr>
 
 <tr>
  <td>1</td>
@@ -95,7 +84,7 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Day 2 - HTTP communication, APIs</b><br>
+<br><b>HTTP communication, APIs</b><br>
 We run and develop the Netflix Movie Catalog API - a simple Flask app which simulates the
 Netflix Movie Catalog API.<br><br></td></tr>
 
@@ -118,7 +107,7 @@ Netflix Movie Catalog API.<br><br></td></tr>
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Day 3 - SSH protocol and EC2 instances</b><br>
+<br><b>SSH protocol and EC2 instances</b><br>
 We manually deploy the NetflixMovieCatalog app in an EC2 instance and expose it via a real
 domain name.<br><br></td></tr>
 
@@ -160,7 +149,7 @@ domain name.<br><br></td></tr>
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b> Day 4 - Webservers</b><br>
+<br><b> Webservers</b><br>
 We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy.
 <br><br></td></tr> 
 
@@ -174,7 +163,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Day 5 - Intro to CI/CD pipelines</b><br>
+<br><b>Intro to CI/CD pipelines</b><br>
 We build a simple CI/CD pipeline for both the NetflixMovieCatalog app, and the Nginx
 configuration files.
 <br><br></td></tr> 
@@ -203,7 +192,7 @@ configuration files.
 <br><br></td></tr> 
 
 <tr><td colspan="6" align="center">
-<br><b>Day 6 - Docker containers</b><br>
+<br><b>Docker containers</b><br>
 We use containers to deploy a containerized “monitoring stack” to periodically monitor the
 availability of the NetflixMovieCatalog app.
 <br><br></td></tr> 
@@ -227,7 +216,7 @@ availability of the NetflixMovieCatalog app.
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Day 7 - Docker images I</b><br>
+<br><b>Docker images I</b><br>
 We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
 <br><br></td></tr> 
 
@@ -251,7 +240,7 @@ We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Day 8 - Docker Volumes and Compose</b><br>
+<br><b>Docker Volumes and Compose</b><br>
 We introduce another service: the NetflixFrontend app, which is a Node.js web app (a Netflix
 clone) that depends on the NetflixMovieCatalog API to serve content.
 <br><br></td></tr> 

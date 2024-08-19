@@ -289,27 +289,3 @@ Here's what each stream does:
 By default, these streams are connected to the terminal, but they can be redirected to files or other streams as well. This is a powerful feature of the Unix shell that allows programs to be combined and orchestrated in powerful ways.
 
 Do you see how **"On a Linux system, everything is a file"**. Keep in mind this statement, it'll help you to understand linux's behavior.
-
-# Exercises
-
-### :pencil2: Know your system
-
-Answer the below question only by `cat` the content of files. 
-
-Change directory to the `/proc` directory. 
-
-1. What CPU(s) is the system running on?
-2. How much RAM does it currently use?
-3. How much swap space do you have?
-4. What drivers are loaded?
-5. How many hours has the system been running?
-6. Which filesystems are known by your system?
-
-Change to `/etc`.
-
-1. How long does the system keep the log file in which user logins are monitored?
-2. How many users are defined on your system? Don't count them, let the computer do it for you using wc!
-3. How many groups do you have?
-4. Which version of bash is installed on this system?
-5. Where is the time zone information kept?
-
