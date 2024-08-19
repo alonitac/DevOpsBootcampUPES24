@@ -15,8 +15,8 @@ TBD
 
 First, please complete the course [Onboarding tutorial](tutorials/onboarding.md).
 
-Now review the 3 tutorials below about linux fundamentals and answer the corresponding quiz. 
-When done, please complete and submit the [Linux Mini Project](https://github.com/exit-zero-academy/LinuxMiniProject), **before the bootcamp begins**.
+Review the 3 tutorials below about linux fundamentals and answer the corresponding quiz. 
+When done, please **complete and submit** the [Linux Mini Project](https://github.com/exit-zero-academy/LinuxMiniProject), **before** the bootcamp begins.
 
 
 <table width="100%">
