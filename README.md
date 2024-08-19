@@ -187,11 +187,6 @@ configuration files.
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>End-of-bootcamp summary assignment</b><br>
-<a href="tutorials/final_assignment.md">Final assignment</a>
-<br><br></td></tr> 
-
-<tr><td colspan="6" align="center">
 <br><b>Docker containers</b><br>
 We use containers to deploy a containerized “monitoring stack” to periodically monitor the
 availability of the NetflixMovieCatalog app.
@@ -216,10 +211,10 @@ availability of the NetflixMovieCatalog app.
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>Docker images I</b><br>
-We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
-<br><br></td></tr> 
-
+<br><b>Docker images</b><br>
+We introduce another service: the NetflixFrontend app, which is a Node.js web app (a Netflix
+clone) that depends on the NetflixMovieCatalog API to serve content.
+<br><br></td></tr>
 
 <tr>
  <td>15</td>
@@ -233,35 +228,16 @@ We containerize the NetflixMovieCatalog app and deploy it into the EC2 instance.
 <tr>
  <td>16</td>
  <td>Containers</td>
- <td><a href="tutorials/docker_networking.md">The Bridge network driver for containers</a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/docker_networking.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_networking.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"><a href="tutorials/docker_networking.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
-</tr>
-
-<tr><td colspan="6" align="center">
-<br><b>Docker Volumes and Compose</b><br>
-We introduce another service: the NetflixFrontend app, which is a Node.js web app (a Netflix
-clone) that depends on the NetflixMovieCatalog API to serve content.
-<br><br></td></tr> 
-
-<tr>
- <td>17</td>
- <td>Containers</td>
- <td><a href="tutorials/docker_volumes.md">Docker volumes</a></td>
- <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_volumes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"><a href="tutorials/docker_volumes.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
-</tr>
-
-<tr>
- <td>18</td>
- <td>Containers</td>
  <td><a href="tutorials/docker_compose.md">Docker compose</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_compose.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_compose.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
+
+<tr><td colspan="6" align="center">
+<br><b>End-of-bootcamp summary assignment</b><br>
+<a href="tutorials/final_assignment.md">Final assignment</a>
+<br><br></td></tr> 
 
 </table>
 
