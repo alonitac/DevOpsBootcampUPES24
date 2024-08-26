@@ -84,9 +84,9 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b>HTTP communication, APIs</b><br>
-We run and develop the Netflix Movie Catalog API - a simple Flask app which simulates the
-Netflix Movie Catalog API.<br><br></td></tr>
+<br><b>HTTP communication, APIs, intro to cloud and virtual machines</b><br>
+We run the Netflix Movie Catalog API - a simple Flask app which simulates the
+Netflix Movie Catalog API. Then we deploy the app in a virtual machine in AWS and expose it publicly.<br><br></td></tr>
 
 <tr>
  <td>4</td>
@@ -106,22 +106,8 @@ Netflix Movie Catalog API.<br><br></td></tr>
  <td align="center"><a href="tutorials/networking_http.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
-<tr><td colspan="6" align="center">
-<br><b>SSH protocol and EC2 instances</b><br>
-We manually deploy the NetflixMovieCatalog app in an EC2 instance and expose it via a real
-domain name.<br><br></td></tr>
-
 <tr>
  <td>6</td>
- <td>Networking</td>
- <td><a href="tutorials/networking_ssh.md">SSH protocol</a></td>
- <td align="center">&nbsp;</td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/networking_ssh.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"></td>
-</tr>
-
-<tr>
- <td>7</td>
  <td>AWS</td>
  <td><a href="tutorials/aws_intro.md">Intro to cloud computing in AWS</a></td>
  <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsBootcampUPES24/slides/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
@@ -130,7 +116,7 @@ domain name.<br><br></td></tr>
 </tr>
 
 <tr>
- <td>8</td>
+ <td>7</td>
  <td>AWS</td>
  <td><a href="tutorials/aws_route53.md">DNS protocol and AWS Route53</a></td>
  <td align="center">&nbsp;</td>
@@ -138,9 +124,8 @@ domain name.<br><br></td></tr>
  <td align="center"></td>
 </tr>
 
-
 <tr>
- <td>9</td>
+ <td>8</td>
  <td>AWS</td>
  <td><a href="tutorials/milestone_simple_app_deployment.md">Simple app deployment in AWS</a></td>
  <td align="center">&nbsp;</td>
@@ -149,8 +134,8 @@ domain name.<br><br></td></tr>
 </tr>
 
 <tr><td colspan="6" align="center">
-<br><b> Webservers</b><br>
-We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy.
+<br><b>Webservers, the CI/CD pipeline</b><br>
+We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy, and build a simple CI/CD pipeline for both the NetflixMovieCatalog app
 <br><br></td></tr> 
 
 <tr>
@@ -161,12 +146,6 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/webservers_nginx.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/webservers_nginx.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
-
-<tr><td colspan="6" align="center">
-<br><b>Intro to CI/CD pipelines</b><br>
-We build a simple CI/CD pipeline for both the NetflixMovieCatalog app, and the Nginx
-configuration files.
-<br><br></td></tr> 
 
 <tr>
  <td>11</td>
@@ -188,8 +167,7 @@ configuration files.
 
 <tr><td colspan="6" align="center">
 <br><b>Docker containers</b><br>
-We use containers to deploy a containerized “monitoring stack” to periodically monitor the
-availability of the NetflixMovieCatalog app.
+We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a movies API, and the NetflixFrontend as a frontend app.
 <br><br></td></tr> 
 
 <tr>
@@ -209,12 +187,6 @@ availability of the NetflixMovieCatalog app.
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_containers.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/docker_containers.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
-
-<tr><td colspan="6" align="center">
-<br><b>Docker images</b><br>
-We introduce another service: the NetflixFrontend app, which is a Node.js web app (a Netflix
-clone) that depends on the NetflixMovieCatalog API to serve content.
-<br><br></td></tr>
 
 <tr>
  <td>15</td>
