@@ -105,32 +105,6 @@ In bash, you can use keyboard shortcuts to send signals to process:
 | CTRL+Z   | SIGSTOP | Suspend the process in the background |
 
 
-### Graceful termination of processes
-
-We now demonstrate a very important concept called **Graceful Termination**.
-
-Graceful termination refers to the process of shutting down a program (a process) in a way that allows it to complete its current tasks and close down all processes in a safe and controlled manner. This ensures that no data is lost, and all system resources are properly released.
-
-In our course repo, under `simple_python_server/app.py` you are given a simple Python server based on the [Flask package](https://flask.palletsprojects.com/en/3.0.x/).
-
-First, let's install the Flask package as our server depends on that app. 
-Open up a terminal session from your IDE (e.g. PyCharm) and perform: 
-
-```bash
-pip install flask
-```
-
-Run the server by executing the below command from the `simple_python_server` dir:
-
-```bash
-cd simple_python_server
-python app.py
-```
-
-Obviously, we can send SIGKILL (9) to the server and kill it aggressively. But we want the server to be terminated gracefully. To do so, we will first send SIGTERM, which indicates to the server "you are going to be terminated soon, so take some **grace period** to terminate yourself gracefully".
-
-The server is finishing the process clients requests, closes the connection to the database, and performs some cleanup tasks. Finally, the server terminates itself, while everything is healthy.
-
 ## Services
 
 
@@ -192,6 +166,33 @@ alsa-restore.service                             loaded active exited  Save/Rest
 
 In the above output, UNIT represents the unit name, LOAD indicates that the unit's configuration has been read by systemd, ACTIVE is the state of the unit.
 
+### Graceful termination of processes
+
+We now demonstrate a very important concept called **Graceful Termination**.
+
+Graceful termination refers to the process of shutting down a program (a process) in a way that allows it to complete its current tasks and close down all processes in a safe and controlled manner. This ensures that no data is lost, and all system resources are properly released.
+
+In our course repo, under `simple_python_server/app.py` you are given a simple Python server based on the [Flask package](https://flask.palletsprojects.com/en/3.0.x/).
+
+First, let's install the Flask package as our server depends on that app. 
+Open up a terminal session from your IDE (e.g. PyCharm) and perform: 
+
+```bash
+pip install flask
+```
+
+Run the server by executing the below command from the `simple_python_server` dir:
+
+```bash
+cd simple_python_server
+python app.py
+```
+
+Obviously, we can send SIGKILL (9) to the server and kill it aggressively. But we want the server to be terminated gracefully. To do so, we will first send SIGTERM, which indicates to the server "you are going to be terminated soon, so take some **grace period** to terminate yourself gracefully".
+
+The server is finishing the process clients requests, closes the connection to the database, and performs some cleanup tasks. Finally, the server terminates itself, while everything is healthy.
+
+
 # Exercises
 
 ### :pencil2: Run the `simple_python_server` as a linux service
@@ -237,21 +238,6 @@ Adjust paths according to your specific setup. This `.service` file will enable 
 8. Start the service: `sudo systemctl start simplepy.service`.
 9. Check the service status: `sudo systemctl status simplepy.service`.
 10. Check the service logs (if needed): `journalctl -u simplepy.service`.
-
-
-### :pencil2: Run processes in the background terminal session
-
-"Interactive processes" are processes that are initialized and controlled through a terminal session.
-These processes can run in the foreground, occupying the terminal. 
-Alternatively, they can run in the background. The terminal can accept new commands while the program is running.
-
-1. Open a nes terminal session and execute `sleep 600` which initiates a process that "sleeps" 10 minutes and ends.
-2. Stop the process and send into the background by `CTRL+Z`.
-3. Bring the process to the foreground by `fg`.
-4. Now run the same command while sending the process to the background by the `&` operator: `sleep 600 &`.
-5. Bring the process to the foreground.
-6. Kill the process by `CTRL+C`.
-
 
 
 [linux_process_state]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/linux_process_state.png
