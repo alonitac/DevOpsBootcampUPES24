@@ -135,7 +135,7 @@ Netflix API. Then we deploy the app in a virtual machine in AWS and expose it pu
 
 <tr><td colspan="6" align="center">
 <br><b>Webservers, the CI/CD pipeline</b><br>
-We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy, and build a simple CI/CD pipeline for both the NetflixMovieCatalog app
+We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy, and build a simple CI/CD pipeline for the NetflixMovieCatalog app.
 <br><br></td></tr> 
 
 <tr>
