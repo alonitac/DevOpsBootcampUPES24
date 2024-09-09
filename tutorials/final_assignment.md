@@ -11,7 +11,6 @@ Now, it's time to bring everything together into a fully functional system.
   - **Nginx**: As the HTTP engine and reverse proxy.
   - **NetflixFrontend**: A Node.js web app serving as the frontend.
   - **NetflixMovieCatalog**: A Flask-based API for the movie catalog.
-  - **Monitoring Stack**: Grafana and InfluxDB for monitoring, with a bash script to test service availability.
 - Implement a CI/CD pipeline using GitHub Actions to automate deployment of updates to the NetflixFrontend, NetflixMovieCatalog, and Nginx configuration.
 - All services accessible via a domain registered and managed through Route 53.
 
