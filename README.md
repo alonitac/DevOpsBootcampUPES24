@@ -79,14 +79,14 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
  <td>Linux and Bash</td>
  <td><a href="tutorials/bash_techniques.md">Bash techniques</a></td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/bash_techniques.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/bash_techniques.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
 <tr><td colspan="6" align="center">
 <br><b>HTTP communication, APIs, intro to cloud and virtual machines</b><br>
 We run the Netflix Movie Catalog API - a simple Flask app which simulates the
-Netflix Movie Catalog API. Then we deploy the app in a virtual machine in AWS and expose it publicly.<br><br></td></tr>
+Netflix API. Then we deploy the app in a virtual machine in AWS and expose it publicly.<br><br></td></tr>
 
 <tr>
  <td>4</td>
