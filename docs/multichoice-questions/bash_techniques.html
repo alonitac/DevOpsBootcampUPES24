@@ -4,7 +4,7 @@
     <html>
     <head>
         <title>
-    Bash -  command techniques - multichoice questions
+    Bash -  command techniques
     </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
@@ -33,7 +33,7 @@
             }
         </style>
         <script>
-            const solutions = {'1': 'a9788e889e31fccc4651902adb05d2f8c4bcc1845694d91202e72716ebe9a4a0', '2': '5820c5a6bfe3e6d5afa6f9a770c9b43594990dcbc7c478e9b58623f3a1437cbc', '3': '9bbde5101fe8c995ddd5c5e56653151730c7cc013e26ab07384353098b1192bd', '4': '55cd51cb386a4ff0ebbed545fe3690ff9d8818cc761f80df4a15aec6128e0508', '5': '8dc683d465cb1e3dc211ac0360245fded07df2f1f36b9bcdf091b04bc18f6bac', '6': 'c0e034c184aedfcd6287d307419bace571213690d86c7adfd8d2922697e5ac45'}
+            const solutions = {'1': 'e9126f469646506b8e82b4214d075bf72d9d324d357650ba670ed6f6fbbf2a75', '2': '451ea98fe45ef0d6db24baeaf4dd2bb5fd8334971b6c889fe06ec2c702d0069a', '3': '4787e1998ea0068740a4d43cca83c84fa6233bbc66d12b8d442cda81e46e75ba', '4': '55cd51cb386a4ff0ebbed545fe3690ff9d8818cc761f80df4a15aec6128e0508', '5': '8dc683d465cb1e3dc211ac0360245fded07df2f1f36b9bcdf091b04bc18f6bac', '6': '9cebf1322fffdf11771803d73c556225b5f1f87745c44f71071478ba54ba337e', '7': '617d73f7daa20be81d5318b14f24db980b0f1d4e5cd897355aa57c4bcaf2c6d3'}
         </script>
     </head>
     <body>
@@ -45,9 +45,35 @@
             </p>
             
 
-    <h1>Bash -  command techniques - multichoice questions</h1>
-<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+    <h1>Bash -  command techniques</h1>
+<p><strong>Please answer the quiz and click the "Test" button at the bottom right.</strong></p>
 <h2>Question 1</h2>
+<p>Which of the following commands would create a file called <code>jan_reports.txt</code>?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>MONTH=jan; touch ${MONTH}_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH=jan; touch $MONTH_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH= jan; touch $MONTH_report.txt</code></li>
+<li><input type="checkbox"> <code>MONTH= jan; touch $"MONTH"_report.txt</code></li>
+<li><input type="checkbox"> A and B</li>
+</ul>
+<h2>Question 2</h2>
+<p>Which command would display the current shell’s process id (pid)?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>echo $$</code></li>
+<li><input type="checkbox"> <code>echo $!</code></li>
+<li><input type="checkbox"> <code>echo $PID</code></li>
+<li><input type="checkbox"> <code>echo $BASH_PID</code></li>
+<li><input type="checkbox"> None of the above</li>
+</ul>
+<h2>Question 3</h2>
+<p>When used from within a script, which variable contains the name of the script?</p>
+<ul style="list-style-type: none;">
+<li><input type="checkbox"> <code>$0</code></li>
+<li><input type="checkbox"> <code>$#</code></li>
+<li><input type="checkbox"> <code>$$</code></li>
+<li><input type="checkbox"> <code>$@</code></li>
+</ul>
+<h2>Question 4</h2>
 <p>After running a command line from an interactive bash prompt, the following messages are displayed:</p>
 <pre><code class="language-text">bash: timelog: Permission denied
 timestamp failed
@@ -60,7 +86,7 @@ timestamp failed
 <li><input type="checkbox"> A and C</li>
 <li><input type="checkbox"> All of the above</li>
 </ul>
-<h2>Question 2</h2>
+<h2>Question 5</h2>
 <p>Which of the following would run the <code>chmod</code> command only if the <code>mkdir</code> command succeeds?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>mkdir mail || chmod 700 mail</code></li>
@@ -69,7 +95,7 @@ timestamp failed
 <li><input type="checkbox"> <code>mkdir mail | chmod 700 mail</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 3</h2>
+<h2>Question 6</h2>
 <p>Which of the following would run the <code>chmod</code> command only if the <code>mkdir</code> command fails?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>mkdir mail | chmod 700 mail</code></li>
@@ -78,16 +104,7 @@ timestamp failed
 <li><input type="checkbox"> <code>mkdir mail or chmod 700 mail</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 4</h2>
-<p>Which of the following would run the <code>chmod</code> command regardless of the success or failure of the <code>mkdir</code> command?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>mkdir mail | chmod 700 mail</code></li>
-<li><input type="checkbox"> <code>mkdir mail &amp;&amp; chmod 700 mail</code></li>
-<li><input type="checkbox"> <code>mkdir mail ; chmod 700 mail</code></li>
-<li><input type="checkbox"> A and C</li>
-<li><input type="checkbox"> None of the above</li>
-</ul>
-<h2>Question 5</h2>
+<h2>Question 7</h2>
 <p>When the user <code>plato</code> runs the following command, what is the name of the file that is written to?</p>
 <pre><code class="language-bash">cal &gt; calendar.$(id -un).txt`
 </code></pre>
@@ -97,14 +114,6 @@ timestamp failed
 <li><input type="checkbox"> <code>calendar.id-un.txt</code></li>
 <li><input type="checkbox"> <code>calendar.512.txt</code></li>
 <li><input type="checkbox"> None of the above</li>
-</ul>
-<h2>Question 6</h2>
-<p>Which operator tells the shell to run a given command in the background?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>!</code></li>
-<li><input type="checkbox"> <code>&amp;&amp;</code></li>
-<li><input type="checkbox"> <code>&amp;</code></li>
-<li><input type="checkbox"> <code>$</code></li>
 </ul> 
     
         <script>
@@ -159,9 +168,10 @@ timestamp failed
         </script>
     
         <input type="button" class="floating-button" value="Test" onclick="test()">
-    
+
     </article>    
-    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="license" style="max-width: 100%;"></a>
+
     </body>
     </html>
     

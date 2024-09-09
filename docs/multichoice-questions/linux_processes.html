@@ -4,7 +4,7 @@
     <html>
     <head>
         <title>
-    Linux - Processes - multichoice questions
+    Linux - Processes
     </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
@@ -33,7 +33,7 @@
             }
         </style>
         <script>
-            const solutions = {'1': 'af2aef7071ca92fd7c9b80f9eb2263ffacf7d6dae5d0612e1ba4bbc04e04fc47', '2': 'a72baf2ea0bfd03b5d99763aaecd821201b45acb2bbe4e7243cb7c459fae576f', '3': 'dee0e46ee9d67151bdf0e8b4fc1b33070c9713fe3299ea46be32e4bcc997ed6b', '4': '79e68355d7443a5042d8dcd2ef0b9e1178b6b673b58ee76a161a780a7e83aa84', '5': '8e99960adea594f6a182af856afa579d41f4230ab3e13a07e379ed359710cbe0', '6': 'f1ede85063de36b37686b6a5c9b998529aa2e850578229c284e68956c7d1ba8f', '7': 'd5dfd53a061cdc0f680ac9fe3cd460d307075aab0b4b72f32ccdb090cefec205', '8': 'b2f7f8759dbf8d3530162a89dc6f1f4d9a1a9ac13d3a6a72409ffd96afa1a0a9', '9': 'fc8b484dd6a40ccb6a622631777345ae88a32bfcbdf5e4717b50a1b9413ea7c5', '10': '8f3fedcf25b94f5a27149e8d90ab8e277f22812616b99671756dc7813e4677e7', '11': 'c2346193c633a6b2314f6fb6f2bc5ee06350c584096610532ab59403b4e7adb6', '12': '5c5421fc6847d4a96a5084d2b30101a22ab65be28f18c29437a627c07d29764e', '13': '0f2cb44170f42cc966535f392a10dcd4499426df69dc476f1bf36609f7fa8c1e'}
+            const solutions = {'1': 'af2aef7071ca92fd7c9b80f9eb2263ffacf7d6dae5d0612e1ba4bbc04e04fc47', '2': 'a72baf2ea0bfd03b5d99763aaecd821201b45acb2bbe4e7243cb7c459fae576f', '3': 'e2a9bd705c0135ee242f538370abbd2560ddff689962b7f3298b3bc677ac039b', '4': '0c45b42d0b5f32c1afb63cbceb970f39b11da5ba85d02e1f19c74917f50f1542', '5': '9c978dcb04837772fa07f07e3c1a8ccb8aa4b7bb175a9e96b8f1ccb0c71f474a', '6': '188e0299e3548502133a2f6c9583a34094cc4c17ecd5f772c5fc20bc703f30cb', '7': '0b51c1aad5ddd842e874d9d3da2cd4336e9660a1d289cfaa7a271fe2dc2f6194', '8': 'c86fa2e2a9877cafa7327cdd1bbb001a3d115219690da11550b11b832f41a008', '9': '7771a85905d16b31da719c8ec85dab4f624c63c3314f23e5440de2ae663f603c', '10': 'fe675fe7aaee830b6fed09b64e034f84dcbdaeb429d9cccd4ebb90e15af8dd71'}
         </script>
     </head>
     <body>
@@ -45,17 +45,9 @@
             </p>
             
 
-    <h1>Linux - Processes - multichoice questions</h1>
-<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+    <h1>Linux - Processes</h1>
+<p><strong>Please answer the quiz and click the "Test" button at the bottom right.</strong></p>
 <h2>Question 1</h2>
-<p>A user started a process and logged out from the terminal. Which command he used if the process still running in the background:</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>nokill</code></li>
-<li><input type="checkbox"> <code>nohup</code></li>
-<li><input type="checkbox"> <code>nofg</code></li>
-<li><input type="checkbox"> <code>bg</code></li>
-</ul>
-<h2>Question 2</h2>
 <p>Which of the following is a true statement?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> Only the root user may run processes from a shell.</li>
@@ -63,7 +55,7 @@
 <li><input type="checkbox"> The shell is the kernel component that interacts directly with hardware.</li>
 <li><input type="checkbox"> Only one instance of a shell may be running as a process.</li>
 </ul>
-<h2>Question 3</h2>
+<h2>Question 2</h2>
 <p>Which of the following is not true for the Linux operating system?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> Multiple processes appear to be running at the same time.</li>
@@ -71,7 +63,7 @@
 <li><input type="checkbox"> Programs are stored as files in the filesystem.</li>
 <li><input type="checkbox"> Only one instance of the kernel may be running at any given time.</li>
 </ul>
-<h2>Question 4</h2>
+<h2>Question 3</h2>
 <p>Open a new terminal session and type the command <code>python</code>. Then send a SIGINT signal using your keyboard. What best describes how the python process responds to the SIGINT signal? (you can exit this process by typing <code>exit()</code> in the python console)</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> The program ignores the SIGINT signal.</li>
@@ -80,20 +72,7 @@
 <li><input type="checkbox"> The program behaves as the kernel's default signal handler for the SIGINT signal, which is to stop (suspend) the process.</li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 5</h2>
-<p>Given the bellow terminal output:</p>
-<pre><code class="language-console">myuser@localhost:~$ sleep 600 &amp;
-myuser@localhost:~$ sleep 600 &amp;
-myuser@localhost:~$ sleep 600 &amp;
-</code></pre>
-<p>Which command could be used to know how many processes are running in the background terminal session?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>process</code></li>
-<li><input type="checkbox"> <code>jobs</code></li>
-<li><input type="checkbox"> <code>work</code></li>
-<li><input type="checkbox"> <code>list</code></li>
-</ul>
-<h2>Question 6</h2>
+<h2>Question 4</h2>
 <p>Given a terminal session with a long process running in it, how will you <strong>ask</strong> this process to terminate?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> CTRL+z</li>
@@ -101,21 +80,13 @@ myuser@localhost:~$ sleep 600 &amp;
 <li><input type="checkbox"> CTRL+l</li>
 <li><input type="checkbox"> CTRL+c twice</li>
 </ul>
-<h2>Question 7</h2>
+<h2>Question 5</h2>
 <p>Given a terminal session with a long process running in it, how will you <strong>ask</strong> this process to stop?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> CTRL+z</li>
 <li><input type="checkbox"> CTRL+c</li>
 <li><input type="checkbox"> CTRL+l</li>
 <li><input type="checkbox"> CTRL+c twice</li>
-</ul>
-<h2>Question 8</h2>
-<p>How would you run the <code>sleep 10</code> command as a foreground process?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>fg sleep 10</code></li>
-<li><input type="checkbox"> <code>sleep 10 &amp;</code></li>
-<li><input type="checkbox"> <code>foreground sleep 10</code></li>
-<li><input type="checkbox"> <code>sleep 10</code></li>
 </ul>
 <p>Given the following output:</p>
 <pre><code class="language-console">[maxwell@station maxwell]$ ps -U maxwell
@@ -134,7 +105,7 @@ PID  TTY    TIME    CMD
 5942 pts/7  00:00:00 find
 </code></pre>
 <p>Answer the next 3 questions below.</p>
-<h2>Question 9</h2>
+<h2>Question 6</h2>
 <p>Which of the following commands would deliver a SIGTERM to the <code>xscreensaver</code> process?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>kill TERM xscreensaver</code></li>
@@ -143,7 +114,7 @@ PID  TTY    TIME    CMD
 <li><input type="checkbox"> <code>kill -9 4846</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 10</h2>
+<h2>Question 7</h2>
 <p>Which of the following would deliver a SIGKILL to the <code>xscreensaver</code> command?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>kill -9 4846</code></li>
@@ -152,7 +123,7 @@ PID  TTY    TIME    CMD
 <li><input type="checkbox"> <code>kill -15 4846</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 11</h2>
+<h2>Question 8</h2>
 <p>Which of the following would send a SIGCHLD (signal number 17) to the <code>ssh-agent</code> process?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>kill -CHLD ssh-agent</code></li>
@@ -161,7 +132,7 @@ PID  TTY    TIME    CMD
 <li><input type="checkbox"> All of the above</li>
 <li><input type="checkbox"> A and C only</li>
 </ul>
-<h2>Question 12</h2>
+<h2>Question 9</h2>
 <p>Which key pressed within the <code>top</code> command allows the user to send a signal to a process?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>s</code></li>
@@ -170,7 +141,7 @@ PID  TTY    TIME    CMD
 <li><input type="checkbox"> <code>k</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 13</h2>
+<h2>Question 10</h2>
 <p>The <code>kill</code> command always terminates a process.</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> True</li>
@@ -229,9 +200,10 @@ PID  TTY    TIME    CMD
         </script>
     
         <input type="button" class="floating-button" value="Test" onclick="test()">
-    
+
     </article>    
-    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="license" data-canonical-src="" style="max-width: 100%;"></a>
+
     </body>
     </html>
     
