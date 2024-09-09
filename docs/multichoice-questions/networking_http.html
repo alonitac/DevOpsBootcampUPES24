@@ -4,7 +4,7 @@
     <html>
     <head>
         <title>
-    Networking - HTTP - multichoice questions
+    Networking - HTTP
     </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
@@ -33,7 +33,7 @@
             }
         </style>
         <script>
-            const solutions = {'1': 'e443169117a184f91186b401133b20be670c7c0896f9886075e5d9b81e9d076b', '2': '971e28bfa6d58f307ceb7acaa4a7720c1b96029fe5a86dbd962a85ed90f7e69d', '3': 'dee0e46ee9d67151bdf0e8b4fc1b33070c9713fe3299ea46be32e4bcc997ed6b', '4': 'b993c8014a9a736ee31cb4d3369778bed3c20b1e72bb27e5ebe4f9b68afd418b', '5': '8e99960adea594f6a182af856afa579d41f4230ab3e13a07e379ed359710cbe0', '6': 'f1ede85063de36b37686b6a5c9b998529aa2e850578229c284e68956c7d1ba8f', '7': '6a116b47a793ad258fe787f115bfa9374b2160981ff6345dfef4cd3acbe3f8b5', '8': 'be011a0b221d45c5dcf3162f0488e74c0024a2c48a5646b1b22cd44a2c0dead5', '9': '9de3888231a1021acddcaa006b2f2a1ead5e245ae44a6b50e997afa9371e081e', '10': '4c1d77cf5e1123c03e8cbe8e01dcdeb6d4b146ca1d6c157fdf312d42713c3ea6', '11': '4c9bf88bc02a3ea8c292f151e5d7895abc5f963363613f5d52764350df2cb869'}
+            const solutions = {'1': 'e443169117a184f91186b401133b20be670c7c0896f9886075e5d9b81e9d076b', '2': '971e28bfa6d58f307ceb7acaa4a7720c1b96029fe5a86dbd962a85ed90f7e69d', '3': 'dee0e46ee9d67151bdf0e8b4fc1b33070c9713fe3299ea46be32e4bcc997ed6b', '4': 'b993c8014a9a736ee31cb4d3369778bed3c20b1e72bb27e5ebe4f9b68afd418b', '5': '8e99960adea594f6a182af856afa579d41f4230ab3e13a07e379ed359710cbe0', '6': 'f1ede85063de36b37686b6a5c9b998529aa2e850578229c284e68956c7d1ba8f', '7': '6a116b47a793ad258fe787f115bfa9374b2160981ff6345dfef4cd3acbe3f8b5'}
         </script>
     </head>
     <body>
@@ -45,7 +45,9 @@
             </p>
             
 
-    <h1>Networking - HTTP - multichoice questions</h1>
+    <h1>Networking - HTTP</h1>
+<p><strong>Please answer the quiz and click the "Test" button at the bottom right.</strong></p>
+<hr>
 <p>Given the following request message for some HTML page, answer the questions below.</p>
 <pre><code class="language-text">GET ../../6.031/www/fa17/classes/24-sockets-networking/ HTTP/1.1
 Host: web.mit.edu
@@ -115,52 +117,6 @@ Sec-Fetch-Dest: document
 <li><input type="checkbox"> response_code &gt; 200</li>
 <li><input type="checkbox"> response_code &lt; 500</li>
 <li><input type="checkbox"> response_code &gt;= 400</li>
-</ul>
-<h2>Question 8</h2>
-<p><strong>Load balancer</strong> is a piece of software that efficiently distributes incoming network traffic across multiple servers.</p>
-<p>By default, a load balancer redirects an incoming requests to a random server:</p>
-<p><img alt="" src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/networking_load_balancer.png"></p>
-<p>Sometimes, it is useful to redirect incoming requests to the same server with which a given user was originally redirected to. For example, if a given user was redirected to server B when initially accessed the website, from now on, the load balancer will redirect every request of this user to server B/</p>
-<p>This process is called a <strong>Sticky Session</strong>. The load balancer creates an affinity between a client and a specific server for the duration of a session.</p>
-<p>How could that be achieved using cookies?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The load balancer caches the information mapping users to the server by client IP.</li>
-<li><input type="checkbox"> The load balancer adds a cookie to the server response containing the server ID for which this client is redirected in further requests.</li>
-<li><input type="checkbox"> The client sends a cookie to the load balancer containing the server ID for which the client wants to communicate with.</li>
-<li><input type="checkbox"> The server uses the <code>Path</code> attribute to indicate which paths the client is allowed to access.</li>
-</ul>
-<h2>Question 9</h2>
-<p>Which of the following statements is a misconception of cookies?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> Cookies can track users' browsing activity to serve them relevant ads.</li>
-<li><input type="checkbox"> Cookies can help to manage the browsing session of users, i.e. to keep users logged in even when refreshing the page or closing the website tab.</li>
-<li><input type="checkbox"> Cookies can personalize websites to improve user experience, such as selected language or accessibility preferences.</li>
-<li><input type="checkbox"> Cookies can contain code that may be executed locally on the client machine and cause potential damage.</li>
-</ul>
-<h2>Question 10</h2>
-<p>What is the purpose of a <code>cookie</code> header value in an HTTP <strong>GET request</strong>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> This is a value that was returned by a web server to this client during an earlier interaction.</li>
-<li><input type="checkbox"> It encodes the format the client prefers to get the response.</li>
-<li><input type="checkbox"> It indicates server HTTP protocol version.</li>
-<li><input type="checkbox"> It encodes a default setting of the client's browser.</li>
-</ul>
-<h2>Question 11</h2>
-<p>A client sends 2 requests to the server. Here is the response for the first request:</p>
-<pre><code class="language-text">HTTP/1.0 200 OK
-Date: Wed, 09 Sep 2020 23:46:21 +0000
-Server: Apache/2.2.3 (CentOS)
-Last-Modified: Wed, 09 Sep 2020 23:51:41 +0000
-ETag:17dc6-a5c-bf716880.
-Content-Length: 418
-Connection: Close
-Content-type: image/html
-</code></pre>
-<p>Was the client used the same TCP socket for both requests?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> Yes</li>
-<li><input type="checkbox"> No</li>
-<li><input type="checkbox"> We don't know</li>
 </ul> 
     
         <script>
@@ -215,9 +171,10 @@ Content-type: image/html
         </script>
     
         <input type="button" class="floating-button" value="Test" onclick="test()">
-    
+
     </article>    
-    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="license" style="max-width: 100%;"></a>
+
     </body>
     </html>
     
