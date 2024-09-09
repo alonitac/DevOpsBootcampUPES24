@@ -193,61 +193,6 @@ all content is being served from `/usr/share/nginx/html`, and if otherwise not s
 
 If there are several matching location blocks nginx selects the one with the **longest prefix**.
 
-## Serve static content 
-
-An important web server task is serving out files (such as images or static HTML pages, images and media files).
-
-Let's say we are Netflix, and we want to serve the poster image of movies to our website visitors.
-
-1. Create a dir under `/usr/share/nginx/poster`, download and extract some images for example:
-   ```bash
-   cd /usr/share/nginx/poster
-   wget https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/netflix_movies_poster_img/images.tar.gz
-   tar -xzvf images.tar.gz
-   ```
-2. Under `/etc/nginx/conf.d/default.conf`, add another `location` directive that will be responsible for images serving, as follows:
-```text
-location /poster/ {
-    root   /usr/share/nginx;
- }
-```
-3. To apply the new configurations: `sudo systemctl reload nginx`.
-4. Try to serve some image by visit `http://<nginx-instance-ip>/poster/<some-image-path>`
-5. Try to serve some image that doesn't exist. What happened?
-
-In case something does not work as expected, you may try to find out the reason in `access.log` and `error.log` files in the directory `/usr/local/nginx/logs` or `/var/log/nginx`.
-
-Remember our promise that Nginx can do a lot for you? Let's see some examples...
-
-#### Caching
-
-It's very reasonable to cache the served the images on the client side. 
-Users visiting Netflix every day, why should we serve the same image if it was served a few hours ago? 
-
-Here is how you can ask the browser to cache a served image for 30 days: 
-
-```diff
-location /poster/ {
-    root   /usr/share/nginx;
-+   expires 30d;
-}
-```
-
-#### Missing files
-
-Let's say we want to serve a default image in case the requested image was not found:
-
-```diff
-location /poster/ {
-    root   /usr/share/nginx;
-    expires 30d;
-+    error_page 404 /poster/404.jpg;
-}
-```
-
-Make sure the `/usr/share/nginx/poster/404.jpg` file exists.
-
-
 ## Reverse Proxy
 
 ### Forward (regular) proxy vs Reverse Proxy
@@ -288,7 +233,7 @@ Let's serve the Flask web-app behind the Nginx webserver.
    
    ```bash
    python3 -m venv .venv
-   source ./.venv/vin/activate
+   source ./.venv/bin/activate
    pip install -r requirements.txt
    ```
 6. Change the default configurations on your Nginx. Override the `location /` directive in `/etc/nginx/conf.d/default.conf` by the following:
@@ -302,11 +247,16 @@ location / {
 7. Reload the Nginx server by `sudo systemctl reload nginx`. 
 8. Visit the app in `http://<instance-public-ip>`.
 
+> [!NOTE]
+> In case something does not work as expected, you may try to find out the reason in `access.log` and `error.log` files in the directory `/var/log/nginx`.
+
 # Exercises 
 
 ### :pencil2: Nginx as a Load Balancer for the NetflixMovieCatalog app
 
-1. Create 2 `*.nano` Ubuntu EC2 instance and deploy the [NetflixMovieCatalog][NetflixMovieCatalog] app within them, wrapped by a uWSGI server, as done in the tutorial.
+![][webservers_reverse-proxy]
+
+1. Create 2 `*.nano` Ubuntu EC2 instance and deploy the [NetflixMovieCatalog][NetflixMovieCatalog] app within them.
 2. Review the [upstream](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream) directive docs, and configure your Nginx server to be functioning as a Load Balancer which routes the traffic among your 2 instances. 
    Both the Nginx, and the 2 other instance should reside on the same network, and the communication has to be done using the instance's private IP. 
   
@@ -329,30 +279,34 @@ location / {
    ```
 3. Make sure the traffic is distributed over the two backends (almost) evenly. 
 
-### :pencil2: Headers behind a reverse proxy
 
-By default, Nginx redefines two header fields in proxied requests, `Host` (set to the `$proxy_host` [variable](https://nginx.org/en/docs/http/ngx_http_core_module.html#variables)) and `Connection` (set to `close`).
-This behavior can cause issues by loosing information about the original client request, such as the client's IP address and the originally requested host.
-To change these settings, as well as modifying other header fields, use the [`proxy_set_header`](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_set_header) directive.
+### :pencil2: Serve static content 
 
+An important web server task is serving out files (such as images or static HTML pages, images and media files).
+
+Let's say we are Netflix, and we want to serve the poster image of movies to our website visitors.
+
+1. Create a dir under `/usr/share/nginx/poster`, download and extract some images for example:
+   ```bash
+   cd /usr/share/nginx/poster
+   wget https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/netflix_movies_poster_img/images.tar.gz
+   tar -xzvf images.tar.gz
+   ```
+2. Under `/etc/nginx/conf.d/default.conf`, add another `location` directive that will be responsible for images serving, as follows:
 ```text
-location / {
-    ...
-    
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    
-    ...
-}
+location /poster/ {
+    root   /usr/share/nginx;
+ }
 ```
+3. To apply the new configurations: `sudo systemctl reload nginx`.
+4. Try to serve some image by visit `http://<nginx-instance-ip>/poster/<some-image-path>`
+5. Try to serve some image that doesn't exist. What happened?
 
-Add these directive and make sure the correct information is available in your Flask app. 
+Remember our promise that Nginx can do a lot for you? Let's see some examples...
 
+### :pencil2: HTTPS in Nginx
 
-### :pencil2: Limit the static content serving functionality 
-
-- Using Regular Expression, modify the `location /poster/` to serve only files ends with `.jpg`.
-- Configure your `server` to block any requests without a `Host` header that match your website domain. The server should return a `400` status code (bad request).
+Serve your Nginx server over HTTPS, and create another `server` which listens to HTTP (port 80) and redirect all traffic to the HTTPS `server`.
 
 
 
