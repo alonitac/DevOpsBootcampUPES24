@@ -156,25 +156,6 @@ Bad requests would be responded by:
 "json": null
 ```
 
-### :pencil2: Working with GitHub API
-
-Review the official GitHub API docs on how to make requests to the API:    
-https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28#making-a-request
-
-1. Use the API to get information about the [NetflixMovieCatalog][NetflixMovieCatalog] repository.   
-   **Endpoint:** https://api.github.com/repos/{owner}/{repo}     
-   **Method:** `GET`
-
-   Use `jq` to extract and print the following information from the JSON response:
-
-   - Repository name
-   - Description
-   - Star count
-   - Fork count
-
-2. Use the API to find out the most starred repository of the **Netflix** organization and print its name and star count.    
-   Hint: You can use the endpoint https://api.github.com/orgs/{org}/repos to list all repositories in an organization and then `sort` by the `stargazers_count` field.
-
 
 [http-req-res]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/networking_http-req-res.png
 [networking_cookies]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/networking_cookies.png
