@@ -110,8 +110,8 @@ Netflix API. Then we deploy the app in a virtual machine in AWS and expose it pu
  <td>6</td>
  <td>AWS</td>
  <td><a href="tutorials/aws_intro.md">Intro to cloud computing in AWS</a></td>
- <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsBootcampUPES24/slides/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
- <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/multichoice-questions/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
@@ -121,7 +121,7 @@ Netflix API. Then we deploy the app in a virtual machine in AWS and expose it pu
  <td><a href="tutorials/aws_route53.md">DNS protocol and AWS Route53</a></td>
  <td align="center">&nbsp;</td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a href="tutorials/aws_route53.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
 <tr>

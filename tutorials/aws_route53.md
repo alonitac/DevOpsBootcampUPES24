@@ -37,6 +37,18 @@ It enables you to manage how traffic is routed to your resources by defining var
    Your new records take time to propagate to the Route 53 DNS servers.
 
 
+# Exercises
+
+### :pencil2: Connect to your instance using you sub-domain
+
+Try to connect to your instance via:
+
+```bash
+ssh -i ... ubuntu@my-name.devops-days-upes.com
+```
+
+While changing `...` to the path of your private key `.pem` file. 
+
 
 [aws_route_53_dns]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/aws_route_53_dns.png
 

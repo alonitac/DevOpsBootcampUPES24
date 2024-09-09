@@ -99,7 +99,7 @@ ssh -i "</path/key-pair-name.pem>" ubuntu@<instance-public-dns-name-or-ip>
 
 Try to `ping` the instance from your local machine. Having troubles?
 Note that by default, the only allowed inbound traffic to an EC2 instance is port 22 (why?).
-[Take a look here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html#add-rule-authorize-access) to know how to allow inbound traffic for different ports. 
+[Take a look here](https://docs.aws.amazon.com/vpc/latest/userguide/working-with-security-group-rules.html) to know how to allow inbound traffic for different ports. 
 
 
 [networking_project_stop]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/networking_project_stop.gif
