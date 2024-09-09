@@ -92,7 +92,7 @@ Netflix API. Then we deploy the app in a virtual machine in AWS and expose it pu
  <td>4</td>
  <td>Networking</td>
  <td><a href="tutorials/networking_computer_nets.md">Computer networks</a></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/networking_OSI_model.html.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/networking_OSI_model.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/networking_computer_nets.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/networking_computer_nets.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
