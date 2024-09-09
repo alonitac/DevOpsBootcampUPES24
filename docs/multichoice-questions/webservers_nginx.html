@@ -33,7 +33,7 @@
             }
         </style>
         <script>
-            const solutions = {'1': '2a057642222a878bc360f52f8e1f0dfd2af93196f123269397423155a4ec4884', '2': 'a938be8fc6f5c245434d1d4996b7786ff0667e00b2db642be718b842976d99ca', '3': '652be5a0a2711e7c6b4ef2941d12dbfbafd897c0256b658c66737ce70c7c7187', '4': '0c45b42d0b5f32c1afb63cbceb970f39b11da5ba85d02e1f19c74917f50f1542', '5': 'c9df3029c64e26aee3c3da7a34a1270de9557c091467c5b36aa7a28d48041118', '6': 'f1ede85063de36b37686b6a5c9b998529aa2e850578229c284e68956c7d1ba8f', '7': 'eec9ad4ba80ed8ada2cec9dbd095632e2f794b618a9a58eadf659c31f3120ba0', '8': '25c7333f558be07eb1b247c5e469cc800a5beb7e6c4a529f7eacff459b3da4ee', '9': '089bee9c3b8caace8c024042fcfc73b80cf857a77bbb82a680f218cba1726aaf', '10': '7618f66753db7ec069c83ed8c197708e1402396774f60961065addd678933871', '11': '6a7bd1b72911ab800d1f1806f3d0f2b0d44dbb87ed4411fc841c40b8e704687a', '12': '1e3c1e691374cd044003ae4058b5c0859abcdaf1288835327102d0cb138e79a0', '13': '6fa81431ad0cd95d8772bbdb8e1755f1e165f0414cd667ce009e41d30aea2c4b', '14': '8a7326e97e1c1badd19f457a3a8105ebe93c8eee38744bd955c8a41304a1586c', '15': '8d224cc727f34e7bdd6218b44bbcb51ffc1c5de5812018a5162533bd94e528c6', '16': '632aa073b82bacb59fd26d89b0378a3806dad43dead09fe723f9a989151b213c', '17': '5445f17268011b0d704bfaa4ffe9d92701fbcf6fb4fb0f8c06e9eecc10b36ec9'}
+            const solutions = {'1': '17214e2d30ebb0eafe4b8866d63e3431e7258a23bbbc214cd92ddc72e114ba42', '2': 'a72baf2ea0bfd03b5d99763aaecd821201b45acb2bbe4e7243cb7c459fae576f', '3': '90c057678bcaee0767b2d39294da097a6d1ac3cf2b3c1e64d496fa5d229b1c2d', '4': '0c45b42d0b5f32c1afb63cbceb970f39b11da5ba85d02e1f19c74917f50f1542', '5': '9c978dcb04837772fa07f07e3c1a8ccb8aa4b7bb175a9e96b8f1ccb0c71f474a'}
         </script>
     </head>
     <body>
@@ -47,15 +47,6 @@
 
     <h1>Webservers - Nginx - self-check questions</h1>
 <h2>Question 1</h2>
-<p>Server administrator shuts down a Nginx server while allow the webserver to serve the remaining processes requests (graceful termination). Which command(s) did she use?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>nginx -s stop</code></li>
-<li><input type="checkbox"> <code>nginx -s quit</code></li>
-<li><input type="checkbox"> <code>nginx -s reload</code></li>
-<li><input type="checkbox"> <code>kill -s QUIT $(cat /var/run/nginx.pid)</code></li>
-<li><input type="checkbox"> <code>nginx -s reopen</code></li>
-</ul>
-<h2>Question 2</h2>
 <p>Server administrator made some changes to the Nginx main configuration file (<code>/etc/nginx/nginx.conf</code>). Then performed <code>sudo systemctl restart nginx</code>. Choose the correct sentence(s).</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> The entire service has been restarted. Client's connection to the server might get dropped.</li>
@@ -63,15 +54,7 @@
 <li><input type="checkbox"> On syntax error, the server would not recover after restarted.</li>
 <li><input type="checkbox"> That method, not only the master process is being restarted, but also the workers.</li>
 </ul>
-<h2>Question 3</h2>
-<p>Server administrator made some changes to the Nginx main configuration file (<code>/etc/nginx/nginx.conf</code>). Then performed <code>sudo nginx -s reload</code>. Choose the correct sentence(s).</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The entire service has been restarted. Client's connection to the server might get dropped.</li>
-<li><input type="checkbox"> The Nginx service reloads configurations without stopping the server.</li>
-<li><input type="checkbox"> On syntax error, the server would not recover after restarted.</li>
-<li><input type="checkbox"> That method, not only the master process is being restarted, but also the workers.</li>
-</ul>
-<h2>Question 4</h2>
+<h2>Question 2</h2>
 <p>A Nginx server is running on a VM with 4 CPUs. How many workers it is advisable to be run?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> 1</li>
@@ -96,7 +79,7 @@
 
 </code></pre>
 <p>Answer the below 2 questions.</p>
-<h2>Question 5</h2>
+<h2>Question 3</h2>
 <p>Which of the following config files the server admin should edit in order to change the server's configurations:</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>/etc/nginx/nginx.conf</code></li>
@@ -105,7 +88,7 @@
 <li><input type="checkbox"> <code>/var/run/nginx/nginx.conf</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 6</h2>
+<h2>Question 4</h2>
 <p>How many workers are currently running ?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> 1</li>
@@ -113,168 +96,7 @@
 <li><input type="checkbox"> 3</li>
 <li><input type="checkbox"> 4</li>
 </ul>
-<h2>Question 7</h2>
-<p>A Nginx server with default configuration. Given the below output of <code>netstat -tuna</code> command executed from the server's machine:</p>
-<pre><code class="language-console">myuser@hostname:~$ netstat -tuna
-Active Internet connections (servers and established)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-tcp        0      0 127.0.0.1:3031          0.0.0.0:*               LISTEN     
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN     
-tcp        0      0 172.31.46.24:80         93.172.114.143:47878    ESTABLISHED
-tcp        0      0 127.0.0.1:3031          127.0.0.1:47792         TIME_WAIT  
-tcp        0      0 127.0.0.1:47776         127.0.0.1:3031          TIME_WAIT  
-tcp        0      0 127.0.0.1:3031          127.0.0.1:47788         TIME_WAIT    
-tcp        0      0 172.31.46.24:80         14.101.201.16:47850    ESTABLISHED
-tcp        0      0 172.31.46.24:80         33.9.115.215:47864    ESTABLISHED
-tcp        0      0 127.0.0.1:3031          127.0.0.1:47760         TIME_WAIT  
-</code></pre>
-<p>How many clients are currently hold an open socket connection with the server?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> 1</li>
-<li><input type="checkbox"> 2</li>
-<li><input type="checkbox"> 3</li>
-<li><input type="checkbox"> 4</li>
-<li><input type="checkbox"> None of the above</li>
-</ul>
-<h2>Question 8</h2>
-<p>Given the below reverse proxy server configurations:</p>
-<pre><code class="language-text">server {
-    listen 80;
-    server_name example.com;
-
-    location / {
-        proxy_pass http://localhost:8000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-    }
-}
-</code></pre>
-<p>And given a client visits <code>http://example.com/</code>:</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The client will be redirected to <code>http://localhost:8000</code>.</li>
-<li><input type="checkbox"> The client will be answered with <code>Server not found</code> since there is not running server under <code>localhost:8000</code> on his local machine.</li>
-<li><input type="checkbox"> The client is not aware of <code>http://localhost:8000</code>.</li>
-<li><input type="checkbox"> The client URI is invalid.</li>
-</ul>
-<h2>Question 9</h2>
-<p>Given a Nginx server with the default configuration.
-What happens when a client performs an HTTP request with the header <code>Accept: audio/wav</code>?</p>
-<p>Hint: Take a look on where  <code>/etc/nginx/nginx.conf</code> includes the <code>/etc/nginx/mime.types</code> file. What does it do?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> Nginx will return a 405 Not Acceptable.</li>
-<li><input type="checkbox"> Nginx will return a 406 Not Acceptable.</li>
-<li><input type="checkbox"> Nginx will return a 404 Not Found.</li>
-<li><input type="checkbox"> Nginx will return a 405 Bad request.</li>
-</ul>
-<h2>Question 10</h2>
-<p>Given the below 3 <code>location</code> directives:</p>
-<pre><code class="language-text">location / {
-    ...
-}
-
-location /images/ {
-    ...
-}
-
-location /images/profiles/ {
-    ...
-}
-</code></pre>
-<p>Which of them will serve an HTTP GET request with URI: <code>/images/123.png</code>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>/</code></li>
-<li><input type="checkbox"> <code>/images/</code></li>
-<li><input type="checkbox"> <code>/images/profiles/</code></li>
-<li><input type="checkbox"> None of them</li>
-</ul>
-<p>Given the below 3 <code>location</code> directives:</p>
-<pre><code class="language-text">location / {
-    ...
-}
-
-location /images/ {
-    if ($request_method = POST) {
-        return 400
-    }
-}
-
-location location ~* ^/users/([0-9]+)/ {
-    ...
-}
-</code></pre>
-<p>Answer the below 4 questions.</p>
-<p><strong>Tip</strong>: Use <a href="https://regex101.com/">regex101</a>. Copy te expression <code>^/users/([0-9]+)/</code> and test some string examples.</p>
-<h2>Question 11</h2>
-<p>Which of them will serve an HTTP POST request with URI: <code>/images/123.png</code>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>/</code></li>
-<li><input type="checkbox"> <code>/images/</code></li>
-<li><input type="checkbox"> <code>^/users/([0-9]+)/</code></li>
-<li><input type="checkbox"> None of them</li>
-</ul>
-<h2>Question 12</h2>
-<p>Which of them will serve an HTTP GET request with URI: <code>/images/users/123</code>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>/</code></li>
-<li><input type="checkbox"> <code>/images/</code></li>
-<li><input type="checkbox"> <code>^/users/([0-9]+)/</code></li>
-<li><input type="checkbox"> None of them</li>
-</ul>
-<h2>Question 13</h2>
-<p>Which of them will serve an HTTP GET request with URI: <code>/users/1</code>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>/</code></li>
-<li><input type="checkbox"> <code>/images/</code></li>
-<li><input type="checkbox"> <code>^/users/([0-9]+)/</code></li>
-<li><input type="checkbox"> None of them</li>
-</ul>
-<h2>Question 14</h2>
-<p>Which of them will serve an HTTP GET request with URI: <code>/users/</code>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>/</code></li>
-<li><input type="checkbox"> <code>/images/</code></li>
-<li><input type="checkbox"> <code>^/users/([0-9]+)/</code></li>
-<li><input type="checkbox"> None of them</li>
-</ul>
-<h2>Question 15</h2>
-<p>Given the below 2 different <code>server</code> directives:</p>
-<p>Version 1:</p>
-<pre><code class="language-text">server {
-    listen      80;
-    server_name example.org www.example.org;
-    ...
-}
-
-server {
-    listen      80;
-    server_name example.net www.example.net;
-    ...
-}
-</code></pre>
-<p>Version 2:</p>
-<pre><code class="language-text">server {
-    listen      80;
-    server_name example.net www.example.net;
-    ...
-}
-
-server {
-    listen      80;
-    server_name example.org www.example.org;
-    ...
-}
-</code></pre>
-<p>You are told that the machine's IP is <code>112.57.8.0</code>.
-You open your local browser, type <code>112.57.8.0</code> and hit the Enter key. </p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The first <code>server</code> directive will serve the request, in both versions.</li>
-<li><input type="checkbox"> Both versions will serve <code>example.org</code> as <code>.org</code> is prior to <code>.net</code> in TLD level.</li>
-<li><input type="checkbox"> The request will not be served at all, an 201 status code is returned.  </li>
-<li><input type="checkbox"> None of the above.</li>
-</ul>
-<h2>Question 16</h2>
+<h2>Question 5</h2>
 <p>Given the below reverse proxy configuration:</p>
 <pre><code class="language-text">server {
     listen 80;
@@ -291,24 +113,6 @@ which IP address will the web application see as the source of the request?</p>
 <li><input type="checkbox"> Nginx machine's IP</li>
 <li><input type="checkbox"> The client's IP</li>
 <li><input type="checkbox"> <code>localhost</code></li>
-<li><input type="checkbox"> None of the above</li>
-</ul>
-<h2>Question 17</h2>
-<p>An uWSGI server is running the configuration under <code>simple_flask_webserver/uwsgi.ini</code>.
-Server administrator wants to inspect the socket that the uWSGI server is listening on:</p>
-<pre><code class="language-console">myuser@hostname:~$ netstat -tuna
-Active Internet connections (servers and established)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-tcp        0      0 127.0.0.1:3031          0.0.0.0:*               LISTEN     
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN                        
-tcp        0      0 127.0.0.1:3031          127.0.0.1:51054         TIME_WAIT  
-tcp6       0      0 :::22                   :::*                    LISTEN     
-</code></pre>
-<p>How could the uWSGI server accepts requests from clients, if the only socket it is listening <code>127.0.0.1:3031</code> (which means accepting connection from <code>127.0.0.1</code> only)?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The web application is not accessible that way.</li>
-<li><input type="checkbox"> The web application is accessible only for internal usage.</li>
-<li><input type="checkbox"> The uWSGI server only needs to listen for requests coming from the reverse proxy.</li>
 <li><input type="checkbox"> None of the above</li>
 </ul> 
     
@@ -364,9 +168,10 @@ tcp6       0      0 :::22                   :::*                    LISTEN
         </script>
     
         <input type="button" class="floating-button" value="Test" onclick="test()">
-    
+
     </article>    
-    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="license" style="max-width: 100%;"></a>
+
     </body>
     </html>
     
