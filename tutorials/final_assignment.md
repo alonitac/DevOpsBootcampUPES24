@@ -7,7 +7,7 @@ Now, it's time to bring everything together into a fully functional system.
 
 ## Objectives
 
-- Deploy a containerized microservices architecture in EC2 instances, composed of:
+- Deploy a **containerized** microservices architecture in EC2 instances, composed of:
   - **Nginx**: As the HTTP engine and reverse proxy.
   - **NetflixFrontend**: A Node.js web app serving as the frontend.
   - **NetflixMovieCatalog**: A Flask-based API for the movie catalog.
