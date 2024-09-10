@@ -142,7 +142,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
 <br><br></td></tr> 
 
 <tr>
- <td>10</td>
+ <td>9</td>
  <td>Webservers</td>
  <td><a href="tutorials/webservers_nginx.md">Nginx webserver</a></td>
  <td align="center"></td>
@@ -151,7 +151,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
 </tr>
 
 <tr>
- <td>11</td>
+ <td>10</td>
  <td>CI/CD</td>
  <td>Intro to CI/CD (slides)</td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/ci_cd.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
@@ -160,7 +160,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
 </tr>
 
 <tr>
- <td>12</td>
+ <td>11</td>
  <td>CI/CD</td>
  <td><a href="tutorials/github_actions_ci_cd.md">GitHub Actions and the simple CI/CD pipeline</a></td>
  <td align="center"></td>
@@ -174,7 +174,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
 <br><br></td></tr> 
 
 <tr>
- <td>13</td>
+ <td>12</td>
  <td>Containers</td>
  <td><a href="tutorials/docker_intro.md">Docker intro</a></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/docker_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
@@ -183,7 +183,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
 </tr>
 
 <tr>
- <td>14</td>
+ <td>13</td>
  <td>Containers</td>
  <td><a href="tutorials/docker_containers.md">Docker containers</a></td>
  <td align="center"></td>
@@ -192,7 +192,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
 </tr>
 
 <tr>
- <td>15</td>
+ <td>14</td>
  <td>Containers</td>
  <td><a href="tutorials/docker_images.md">Docker images</a></td>
  <td align="center"></td>
@@ -201,7 +201,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
 </tr>
 
 <tr>
- <td>16</td>
+ <td>15</td>
  <td>Containers</td>
  <td><a href="tutorials/docker_compose.md">Docker compose</a></td>
  <td align="center"></td>
