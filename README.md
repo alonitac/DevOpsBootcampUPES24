@@ -9,7 +9,8 @@ This README contains information on the schedule, materials, exercises and proje
 
 ## AWS Shared Account 
 
-TBD
+https://700935310038.signin.aws.amazon.com/console
+Username: Your SAP-ID
 
 ## Getting Ready for Bootcamp
 

@@ -1,4 +1,4 @@
-# GitHub Actions and the simple CI/CD pipeline 
+# GitHub Actions and the simple CD pipeline 
 
 CI/CD (Continuous integration and continuous deployment) is a methodology which automates the deployment process of software project.
 You'll spend fairly amount of time in your studies to discuss this topic. But for now we want to achieve a simple outcome:
