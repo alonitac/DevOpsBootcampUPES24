@@ -4,7 +4,7 @@
     <html>
     <head>
         <title>
-    Docker - Containers - multichoice questions
+    Docker - Containers
     </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" xmlns="http://www.w3.org/1999/html">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=TextEncoder%2Ccrypto.subtle"></script>
@@ -33,7 +33,7 @@
             }
         </style>
         <script>
-            const solutions = {'1': '24dc9bebea86dd4149d86b7ab672714b2c60b6e76e3f8809133c7f29b5c2d180', '2': '818ca42d051ebe1ba9d7be8398fd4ff982a0c9445ee2681bdee76771445f178a', '3': '90c057678bcaee0767b2d39294da097a6d1ac3cf2b3c1e64d496fa5d229b1c2d', '4': '14b9924bb79e4d6130f430863db83831f03f3a2f14117b74dd55e5e861535daa', '5': '8e99960adea594f6a182af856afa579d41f4230ab3e13a07e379ed359710cbe0', '6': '0ed351caaae35bc5b1c0f6a59902805e7ca9721fd53ac8a0ac944e12db9b4834', '7': '911a226c29dd38fa43b1eb0264ec10dba08d20d57581103f4d0b32c3c5e0fd5c', '8': 'c18377cbb0ff2a6fc1b1998c590cbb0254e91bddefe3b589e5f9cc753e0d643a', '9': '5418a99707d5eef62a9f18ec1cc48e06410aea8596b662fc67c5b755fb5f42fe', '10': '7618f66753db7ec069c83ed8c197708e1402396774f60961065addd678933871', '11': 'b4acfc90a2f9822ecce4971b4b96a78a6edb776621ead66831de794552f182f0', '12': '809067b641b0943ae44476949bfe440db5121e7f4bcc2fbf10ae8c95415256f5', '13': 'f0a54be9ab778391c4a67e01c253b252e28646c9960cb00ba4da8e68c3b672b4', '14': 'a8194f35d9925acbd4fdba7fe0cd741d44ccddfce47618dd411062a959ed742d', '15': '00c40f05c3dbc21ee0bdb51a2fbec86c4dedee57646832148da065aa9a40c563', '16': '0d41ae74bb908ebf03a431a19f5df49bbda3b3be8e9ff864148294dc243149c4', '17': '6336f6c7cde3673dde8c6ca171312300703d0d53144b524ecb343d5817172700', '18': 'da03e4d433ed93a3abbe1c7eaf9f4a9c1577a9cbbdfce726ded5eb3a7b4949a8'}
+            const solutions = {'1': '24dc9bebea86dd4149d86b7ab672714b2c60b6e76e3f8809133c7f29b5c2d180', '2': '818ca42d051ebe1ba9d7be8398fd4ff982a0c9445ee2681bdee76771445f178a', '3': 'dee0e46ee9d67151bdf0e8b4fc1b33070c9713fe3299ea46be32e4bcc997ed6b', '4': '2fd0fcaa97438af987430e8bf091615c72e043b3ebd99b03fa8b6c9823fdfc89', '5': '01828ab6e38e6ad1e7b67be7a1cba3363096cef6ad36a68878222c3760440318', '6': 'ce22f67039918cbb320b478decd852178fe502660851517fad3c8f2b6333bb6d', '7': 'eec9ad4ba80ed8ada2cec9dbd095632e2f794b618a9a58eadf659c31f3120ba0', '8': 'be011a0b221d45c5dcf3162f0488e74c0024a2c48a5646b1b22cd44a2c0dead5', '9': '68bc4088507d3b4859f20bd52d28745726f5cced789e374bebd8f0fef4e91e26', '10': 'c02a8da03e35b07551e3fff4245a5a51404dac0569c6840986e30aaf198de486', '11': 'f4972d45b42830d180360f2a2b5e921e5f67aa18ad09e94dd1cd0c041fed1329'}
         </script>
     </head>
     <body>
@@ -45,8 +45,8 @@
             </p>
             
 
-    <h1>Docker - Containers - multichoice questions</h1>
-<p>Please answer the quiz and click the "Test" button at the bottom right.</p>
+    <h1>Docker - Containers</h1>
+<p><strong>Please answer the quiz and click the "Test" button at the bottom right.</strong></p>
 <h2>Question 1</h2>
 <p>You are trying to run a docker container based on the <a href="https://hub.docker.com/_/ubuntu">Ubuntu image</a>, with the <code>-it</code> flags, and get the below error:</p>
 <pre><code class="language-bash">docker run ubuntu -it
@@ -70,26 +70,6 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> The PID of the container as it is seen from the host machine is different from the PID as it is seen within the container.</li>
 <li><input type="checkbox"> The PID of the container as it is seen within the container is 1.</li>
 <li><input type="checkbox"> The PID of the container is the same as the docker daemon's PID (<code>dockerd</code>).</li>
-</ul>
-<h2>Question 3</h2>
-<p>After a while, what is the status of the container started by:</p>
-<pre><code class="language-bash">docker run ubuntu ps
-</code></pre>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> Running</li>
-<li><input type="checkbox"> Stopped</li>
-<li><input type="checkbox"> Existed</li>
-<li><input type="checkbox"> Created</li>
-<li><input type="checkbox"> None of the above.</li>
-</ul>
-<h2>Question 4</h2>
-<p>When running <code>docker run -e MYSQL_ROOT_PASSWORD=1234 mysql</code>, what is the main process name of the container as it's seen <strong>from the host machine</strong>?</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>mysqld</code></li>
-<li><input type="checkbox"> <code>dockerd</code></li>
-<li><input type="checkbox"> <code>containerd</code></li>
-<li><input type="checkbox"> <code>runc</code></li>
-<li><input type="checkbox"> None of the above</li>
 </ul>
 <p>Based on the below output of <code>docker inspect 303ce6e8af55</code> on some running container:</p>
 <pre><code class="language-json">[
@@ -319,7 +299,7 @@ However, inside the container itself, the running process operates within its ow
 ]
 </code></pre>
 <p>Answer the bellow 6 questions.</p>
-<h2>Question 5</h2>
+<h2>Question 3</h2>
 <p>What is the IP address of the container? </p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> <code>172.17.0.1</code>.</li>
@@ -327,7 +307,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> <code>127.0.0.1</code>.</li>
 <li><input type="checkbox"> IP v6: <code>02:42:ac:11:00:03</code>.</li>
 </ul>
-<h2>Question 6</h2>
+<h2>Question 4</h2>
 <p>How many ports are exposed by the container? </p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> 0</li>
@@ -336,7 +316,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> 3</li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 7</h2>
+<h2>Question 5</h2>
 <p>How many environment variables are given to the container process?</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> 0</li>
@@ -345,14 +325,14 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> 6</li>
 <li><input type="checkbox"> 8</li>
 </ul>
-<h2>Question 8</h2>
+<h2>Question 6</h2>
 <p>Was the container run with the <code>-it</code> flags? </p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> Yes</li>
 <li><input type="checkbox"> No</li>
 <li><input type="checkbox"> We couldn't know from the output.</li>
 </ul>
-<h2>Question 9</h2>
+<h2>Question 7</h2>
 <p>The container status is:</p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> Exited</li>
@@ -361,7 +341,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> Restarting</li>
 <li><input type="checkbox"> We couldn't know from the output.</li>
 </ul>
-<h2>Question 10</h2>
+<h2>Question 8</h2>
 <p>What is the PID of the container as it is seen from the host machine? </p>
 <ul style="list-style-type: none;">
 <li><input type="checkbox"> 1</li>
@@ -369,7 +349,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> 67108864</li>
 <li><input type="checkbox"> We couldn't know from the output. </li>
 </ul>
-<h2>Question 11</h2>
+<h2>Question 9</h2>
 <p>The <a href="https://hub.docker.com/_/mysql">official <code>mysql</code> image</a> is running by the following command: <code>docker run -e MYSQL_ROOT_PASSWORD=1234 mysql</code>. </p>
 <p>Choose the correct answer: </p>
 <ul style="list-style-type: none;">
@@ -379,38 +359,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> The database can never be accessed from the host machine.</li>
 <li><input type="checkbox"> None of the above </li>
 </ul>
-<h2>Question 12</h2>
-<p>The <a href="https://hub.docker.com/_/mysql">official <code>mysql</code> image</a> is running by the following command: <code>docker run -e MYSQL_ROOT_PASSWORD=1234 mysql</code>.</p>
-<p>Which of the below docker commands can help with debugging the <code>/var/run/mysqld/mysqld.sock</code> file, which is located within the container? </p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>docker exec</code></li>
-<li><input type="checkbox"> <code>docker logs</code></li>
-<li><input type="checkbox"> <code>docker run</code></li>
-<li><input type="checkbox"> <code>docker ps</code></li>
-</ul>
-<h2>Question 13</h2>
-<p>When the docker service is restarted by (under default docker daemon configurations):</p>
-<pre><code class="language-bash">sudo systemctl restart docker
-</code></pre>
-<p>What happens to the running containers? </p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> Running containers are killed.</li>
-<li><input type="checkbox"> Running containers are stopped.</li>
-<li><input type="checkbox"> Nothing happens since Docker doesn't run the containers itself, but <code>runc</code> does.</li>
-<li><input type="checkbox"> None of the above. </li>
-</ul>
-<h2>Question 14</h2>
-<p>Which command(s) can help you to resolve the following error: </p>
-<pre><code class="language-text">Error response from daemon: You cannot remove a running container 76004df79402d330992abe9f423715904fb590663f797fee3bca4e9e877f0ac0. Stop the container before attempting removal or force remove
-</code></pre>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>docker run 76004df794</code></li>
-<li><input type="checkbox"> <code>docker kill --signal STOP 76004df794</code></li>
-<li><input type="checkbox"> <code>docker top 76004df794</code></li>
-<li><input type="checkbox"> <code>docker stop 76004df794</code></li>
-<li><input type="checkbox"> <code>docker pause 76004df794</code></li>
-</ul>
-<h2>Question 15</h2>
+<h2>Question 10</h2>
 <p>What is the docker image name with which the below container is running?</p>
 <pre><code class="language-bash">docker run --name mybusy busybox wget localhost
 </code></pre>
@@ -421,7 +370,7 @@ However, inside the container itself, the running process operates within its ow
 <li><input type="checkbox"> <code>localhost</code></li>
 <li><input type="checkbox"> None of the above</li>
 </ul>
-<h2>Question 16</h2>
+<h2>Question 11</h2>
 <p>Consider the bellow two <code>docker run</code> commands:</p>
 <pre><code class="language-bash">docker run -p 8080:80 nginx
 docker run -p 8080:80 nginx
@@ -433,32 +382,6 @@ Choose the correct sentence:</p>
 <li><input type="checkbox"> The second command does nothing since the first command runs the nginx container image successfully.</li>
 <li><input type="checkbox"> The seconds command will fail since you are not able to run two different containers from the <code>nginx</code> image.</li>
 <li><input type="checkbox"> The seconds command will fail since port 8080 is bound to the first container.</li>
-</ul>
-<h2>Question 17</h2>
-<p>The following command has run successfully:</p>
-<pre><code class="language-bash">docker run -it ubuntu /bin/bash
-</code></pre>
-<p>What can be id for sure regarding the container:</p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> The <code>ubuntu</code> image existed on the machine before the command was executed.</li>
-<li><input type="checkbox"> The binary <code>/bin/bash</code> exists in the container's file system. </li>
-<li><input type="checkbox"> The <code>-it</code> flags allow you to run within the container every command that is available on the host machine.</li>
-<li><input type="checkbox"> None of the above.</li>
-</ul>
-<h2>Question 18</h2>
-<p>You are trying to run an <code>nginx</code> container using the following command: </p>
-<pre><code class="language-bash">docker run --name some-nginx -e DEBUG=true nginx
-</code></pre>
-<p>But encounter the following error:</p>
-<pre><code class="language-text">docker: Error response from daemon: Conflict. The container name &quot;/some-nginx&quot; is already in use by container &quot;761aacef37cfe438f77fe92d6e4a2eeecc6d72c9cea9eb5f73d5af5a1ae377d2&quot;. You have to remove (or rename) that container to be able to reuse that name.
-See 'docker run --help'
-</code></pre>
-<p>Which command(s) can help you resolve the problem? </p>
-<ul style="list-style-type: none;">
-<li><input type="checkbox"> <code>docker run --force --name some-nginx -e DEBUG=true nginx</code></li>
-<li><input type="checkbox"> <code>docker rm some-nginx</code></li>
-<li><input type="checkbox"> <code>docker kill some-nginx</code></li>
-<li><input type="checkbox"> <code>docker rename some-nginx some-ng</code></li>
 </ul> 
     
         <script>
@@ -513,9 +436,10 @@ See 'docker run --help'
         </script>
     
         <input type="button" class="floating-button" value="Test" onclick="test()">
-    
+
     </article>    
-    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://camo.githubusercontent.com/9a588afd926871cf6caaabf8f36acf441a53ed69540c3808e77861fbd3711203/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c6967687467726579" alt="license" data-canonical-src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" style="max-width: 100%;"></a>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="license" style="max-width: 100%;"></a>
+
     </body>
     </html>
     
