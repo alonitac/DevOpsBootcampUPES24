@@ -10,7 +10,9 @@ This README contains information on the schedule, materials, exercises and proje
 ## AWS Shared Account 
 
 https://700935310038.signin.aws.amazon.com/console
-Username: Your SAP-ID
+
+- **Username**: Your SAP-ID
+- **Password**: will be given in class
 
 ## Getting Ready for Bootcamp
 
@@ -152,7 +154,7 @@ We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse
  <td>11</td>
  <td>CI/CD</td>
  <td>Intro to CI/CD (slides)</td>
- <td align="center">*<a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/slides/ci_cd.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
  <td align="center"></td>
  <td align="center"></td>
 </tr>
