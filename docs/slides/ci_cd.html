@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Continuous Integration and Continuous Deployment</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+[comment]: # (mdslides presentation.md --include media)
+
+[comment]: # (The list of themes is at https://revealjs.com/themes/)
+[comment]: # (The list of code themes is at https://highlightjs.org/)
+
+[comment]: # (markdown: { smartypants: true })
+
+
+
+<style type="text/css">
+  .reveal { 
+    font-size: 2.2em;
+  }
+
+  .reveal .code-wrapper code {
+    white-space: pre;
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+</style>
+
+
+# Continuous Integration and Continuous Deployment
+
+<img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/what_is_devops_devops1.png" width="50%">
+
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Today's agenda
+
+- What is CI/CD
+- Software delivery before CI/CD
+- CI and CD decomposed
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;">👨‍💻</div>
+
+Developers are coding their new features
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;">👨‍💻 &nbsp &nbsp &nbsp &nbsp 👩🏾‍💻 </div>
+
+When done, their work is delivered to operations team ➡️
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;"> 👩🏾‍💻 </div>
+
+Operations combine all code changes together into a new **Version**
+
+This process is known as **Build**
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;"> 🧐 </div>
+
+Testing teams are manually or automatically  testing the new version
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;"> 👩🏾‍💻 </div>
+
+Operations team deploy the new version in an end-environment (either development or production environment)
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:10rem;width:100%;text-align:center;">🕒</div>
+
+This process takes time... Thus: 
+
+- The deployment is infrequent
+- Large
+- Done much after the code was developed or tested
+- **Production can be easily broken** 😵
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;">👨‍💼 </div>
+
+What product managers **without** DevOps in mind do? 🤔
+
+Ask the teams to **deploy it less** and **test it more**!
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### The bad old days
+
+<div style="font-size:20rem;width:100%;text-align:center;">👨‍💼 </div>
+
+Product managers **with** DevOps in mind say: **deploy it more** and **test it less**!
+
+- Deploy small parts of changes more frequently (sometime multiple times a **day**)
+- Since new versions contain only small changes (comparing to the previous deployed version), it's easy to test it with high confidence 
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### CI/CD
+
+CI/CD is a set of practices and tools used in software development to automate and streamline the process of building, testing, and deploying software.
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Continuous Integration (CI)
+
+**Continuous Integration (CI)** is the practice of frequently and automatically integrating code changes into a new app version, ready to be deployed anytime. 
+ <br><br> <br><br>
+▶️ Commit & Push ▶️ Pre-build test ▶️ Build a version ▶️ Store build artifacts 🏁
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Continuous Integration (CI)
+
+▶️ Commit & Push ▶️ Pre-build test ▶️ Build a version ▶️ Store build artifacts 🏁
+
+- An automated pipeline on **every** new pushed code
+- Example for pre-build testing: unittests, coding style checks (lint)
+- Builds are usually create **Build Artifacts**
+- Artifacts are stored in **Artifact repository** (e.g. Artifactory, Nexus)
+- Testing and security teams can access artifacts that are candidates to be released in future deployments
+
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Continuous Deployment (CD)
+
+**Continuous Deployment (CD)** focuses on automating the process of deploying a CI version into various environments
+
+<br><br><br><br>
+
+▶️ Configure the environment with new version ▶️ Perform rolling update 🏁
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Continuous Deployment (CD)
+
+▶️ Configure the environment with new version ▶️ Perform rolling update 🏁
+
+- Deployment can be done in different environments (e.g. dev, prod, QA, etc...)
+- Configuring the environment to run the new version depends on the system the app is running on (e.g. Kubernetes cluster, serverless Lambda, etc...)
+- **Rolling update** is the process of gradually replace the old version instances with the new one, while minimizing **downtime**.   
+- If the deployment to an environment is done automatically, on every code change, we call it **Continuous Deployment**, if manually, we call it **Continuous Delivery**.
+
+</textarea></section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+### Automation server
+
+In order to support CI/CD, we need an **Automation Server**: a server that automates build, test, and deployment processes.
+
+There are dozens... e.g. **Jenkins**, **GitHub actions**
+
+<img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/media/jenkins_github_actions.png" width="70%">
+
+</textarea></section>
+<section data-markdown  data-background-color="aquamarine"><textarea data-template>
+
+# Thanks
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+
+
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+controls : true,
+keyboard : true,
+hash : false,
+respondToHashChanges : false,
+width : 1500,
+height : 1000,
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
