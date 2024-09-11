@@ -188,108 +188,20 @@ It defines the primary executable or process that should be executed within the 
 
 In our example, we specify the command to run when the container starts, which is `python3 app.py`.
 
-## Image layers
-
-Roughly speaking, each instruction in a Dockerfile translates to an **image layer**.
-The following diagram illustrates how a Dockerfile translates into a stack of layers in a container image.
-
-![][docker_layers]
-
-Let's inspect our built image to see how many layers it is composed by:
-
-```bash
-$ docker inspect netflix_movie_catalog:0.0.1
-...
-
-"Layers": [
-    "sha256:e5baccb54724b971f73bbfa46d477b947c9066e4040d0e002e8f04314f58b58f",
-    "sha256:5d5d684babe65e924137de0350bce27de63e020f36f90df2df3945b815da987a",
-    "sha256:469c8dbcb08a7df265edd06cbf957468d3fd73d3add2c9019c18489eae25b0e7",
-    "sha256:e41449df8276a577a88196e62e8c5d6d5dc563d5a3f492df2f286d644e514e5c",
-    "sha256:6fafa3f6471656dc070c41adb6871731228515ba93f665c0b1c021ac66aeb27d",
-    "sha256:40182d322937358effd2025643dc18ef2cb4d3fdd57817db23dcad0b62bd213f",
-    "sha256:ae7b28ccc5a71e49f37d8a616b0f759d65a4fb6355e0802f019030f76bcdf903",
-    "sha256:61752aa4479e659cdf4e448734c799bcb8d06622ccc939bf0f6188bb98512219"
-]
-
-...
-```
-
-The above example shows the 8 layers that the `netflix_movie_catalog:0.0.1` image is composed with.
-
-Further inspection can discover that the first 5 layers belong to the base image:
-
-```bash
-$ docker inspect python:3.8.12-slim-buster
-...
-"Layers": [
-    "sha256:e5baccb54724b971f73bbfa46d477b947c9066e4040d0e002e8f04314f58b58f",
-    "sha256:5d5d684babe65e924137de0350bce27de63e020f36f90df2df3945b815da987a",
-    "sha256:469c8dbcb08a7df265edd06cbf957468d3fd73d3add2c9019c18489eae25b0e7",
-    "sha256:e41449df8276a577a88196e62e8c5d6d5dc563d5a3f492df2f286d644e514e5c",
-    "sha256:6fafa3f6471656dc070c41adb6871731228515ba93f665c0b1c021ac66aeb27d",
-]
-...
-```
-
-The rest 3 layer are the ones create by the `WORKDIR`, `COPY` and `RUN` instructions in our Dockerfile. 
-
-In general, each Dockerfile instruction that modify the image file system creates a new layer.
-This is why the `CMD` instruction (as opposed to `WORKDIR`, `COPY` and `RUN`) doesn't add another layer since it not changing the file system but only specify the container running command. 
-
-### Layer caching 
-
-When you run a build, docker attempts to reuse layers from earlier builds. 
-If a layer of an image is unchanged, then docker picks it up from the build cache.
-If a layer has changed since the last build, that layer, **and all layers that follow**, must be rebuilt.
-
-The Dockerfile from the previous section copies all project files to the container (`COPY . .`) and then downloads and installs application dependencies in the following step (`RUN pip install -r requirements.txt`).
-If you were to change any of the project files, that would invalidate the cache for the `COPY` layer.
-It also invalidates the cache for all of the layers that follow.
-
-![][docker_cache]
-
-The current order of the Dockerfile instruction make it so that the builder must download and install the Python dependencies again, despite none of the packages having changed since last time.
-
-You can avoid this redundancy by reordering the instructions in the Dockerfile.
-
-#### 🧐 Try it yourself 
-
-Try to redesign `netflix_movie_catalog` Dockerfile to utilize Docker's caching system better. 
-Don't hesitate to add more `COPY` instructions as needed. 
-
-## Image size is matter 
-
-When it comes to Docker images as part of [microservices architecture](https://microservices.io/), big is bad!
-Images should be as small as possible. Big images are hard to work with by means of the time it takes to pull an image and run it as a container. 
-
-Another critical reason is potential vulnerabilities. 
-Containers are designed to run just one application or service, so they only include the necessary code and dependencies for that specific purpose. 
-The bigger your images are, a larger your attack surface, because your image contains more binaries and packages that can potentially have security vulnerabilities. 
-
-The [official Alpine Linux](https://hub.docker.com/_/alpine/tags) Docker image is about 3.25MB in size and is an extreme example of how small Docker images can be.
-[Read here for more information about other flavors of linux docker images](https://medium.com/swlh/alpine-slim-stretch-buster-jessie-bullseye-bookworm-what-are-the-differences-in-docker-62171ed4531d). 
-
-Built your images only with what you need to run the application. 
-
-## Docker image vulnerabilities
-
-Docker images contain security vulnerabilities, either by using vulnerable base image, or install insecure package.
-Docker image security scanning is a process of identifying known security vulnerabilities in the packages listed in your Docker image.
-This gives you the opportunity to find vulnerabilities in container images and fix them before deploying image to production environments.
-
-[Docker Scout](https://docs.docker.com/scout/quickstart/) is a solution for analyzing your images. The free tier allows you to scan up to 3 repositories. 
-
-Follow the [Docker Scout Quickstart](https://docs.docker.com/scout/quickstart/) to familiarize yourself with this tool.  
-
-
 # Exercises
 
 ### :pencil2: Push the `netflix_movie_catalog` image to DockerHub
 
-[Create a free account](https://docs.docker.com/docker-id/) in DockerHub
+[Create a free account](https://docs.docker.com/docker-id/) in DockerHub.
 
 Push the built `netflix_movie_catalog:0.0.1` image to your registry.
+
+### :pencil2: Build the availability agent
+
+Build the availability agent app located in `availability_agent` (this app used in an exercise in Containers tutorial).
+
+The `Dockerfile` is already written. Push the image to DockerHub. 
+
 
 ### :pencil2: Build the Netflix Frontend app
 
@@ -301,38 +213,6 @@ Push the built `netflix_movie_catalog:0.0.1` image to your registry.
 2. Push the image to container registry (either DockerHub or ECR). 
 3. Deploy your image in a fresh new `*.nano` Ubuntu EC2 instance (pull the image and run it). 
 4. In your Nginx instance, create a new `server` which routes traffic to your Netflix Frontend app. The app should be accessible from your domain, e.g.: http://netflix.devops-days-upes.com.
-
-
-### :pencil2: Build the 2048 game
-
-The 2048 game source code is available in this git repo: https://github.com/gabrielecirulli/2048
-
-Use the `nginx:1.23.3-alpine-slim` base image to pack this game in a docker image.
-
-The 2048 repo files have to be located inside the image under `/usr/share/nginx/html`.
-
-Run a container from the newly built image, and make sure you can play the game:
-
-```bash
-docker run -p 8080:80 my-2048-game
-```
-
-### :pencil2: Build the availability agent
-
-Build the availability agent app located in `availability_agent` (this app used in an exercise in Containers tutorial).
-
-- Create a `Dockerfile`.
-- Choose a base image according to your app requirements (it's a simple bash app).
-- Copy the source code into the image.
-- Set a proper `CMD` to launch the app. 
-
-Test your image.
-
-### :pencil2: Fix vulnerability scanning
-
-Use the ` docker scout` command to perform vulnerabilities scan to your `netflix_movie_catalog` image.
-
-How many issues were found in total? How critical, high, medium, low?
 
 
 
