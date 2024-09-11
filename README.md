@@ -193,7 +193,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
  <td>Containers</td>
  <td><a href="tutorials/docker_images.md">Docker images</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_images.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"></td>
  <td align="center"><a href="tutorials/docker_images.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
@@ -202,7 +202,7 @@ We use containers to deploy the Netflix stack - the NetflixMovieCatalog as a mov
  <td>Containers</td>
  <td><a href="tutorials/docker_compose.md">Docker compose</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/docker_compose.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"></td>
  <td align="center"><a href="tutorials/docker_compose.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
