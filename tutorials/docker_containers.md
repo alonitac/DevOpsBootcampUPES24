@@ -223,51 +223,6 @@ The `docker container kill` command is used to forcefully terminate one or more 
 
 Stopped or killed containers can be restarted using the `docker container start` command, which resumes their execution from the point where they were stopped or killed. 
 
-
-#### Restarting a stopped container
-
-When you restart a stopped container using the docker container start command, it resumes execution from the point where it was previously stopped.
-The container retains its configuration and any changes made inside the container's file system prior to stopping.
-
-
-#### Restarting a killed container (you'll barely use it...)
-
-When you restart a killed container using the docker container start command, it starts fresh from the beginning, as if it were a newly created container.
-It's essentially starting a new instance of the container based on the original image and configuration.
-The container does not retain any previous state or changes made inside the container before it was killed.
-
-It's worth noting that the state of a container (stopped or killed) does not affect the Docker images associated with it. 
-Docker images remain unchanged and can be used to create and start new containers as needed.
-
-The `docker container rm` command is used to remove one or more stopped or killed containers from Docker. 
-It allows you to delete containers that are no longer needed, freeing up disk space and cleaning up resources.
-It's important to note that the containers you wish to remove must be in a stopped state. If you attempt to remove a running container, you will encounter an error. 
-
-```bash
-docker container stop my-nginx my-nginx-2
-docker container rm my-nginx my-nginx-2
-docker ps -a 
-```
-
-**Tip**: The `--rm` flag in the `docker run` command is used to automatically remove the container when it exits or stops running. It can be handy when you don't want to retain the container after it has served its purpose.
-
-```bash
-docker pull busybox
-docker run --rm busybox wget google.com
-```
-
-### Start containers automatically
-
-In Docker, the container restart policy determines the actions to be taken by the Docker daemon when a container exits or encounters an error. 
-The restart policy can be specified during container creation using the `--restart` flag with the `docker run` command.
-
-The following example starts a `nginx` container and configures it
-to run in the background and always restart if it stops or if the Docker daemon restarts.
-
-```console
-$ docker run -d --restart always nginx
-```
-
 ### Published ports
 
 By default, when you run a container using the `docker run` command, the container doesn't expose any of its ports to the outside world.
@@ -302,60 +257,104 @@ docker run -d -e MY_VAR=my_value --name nginx4 nginx
 
 ### :pencil2: Availability test system
 
-In this exercise, you will run a bash script which continuously monitor the availability of a pre-determined set of servers using the `ping` command.
-It sends the ping results to an [InfluxDB database](https://www.influxdata.com/) and displays results in [Grafana dashboard](https://grafana.com/grafana/dashboards/).
+In this exercise, you will deploy three containers: 
 
-InfluxDB is a time-series database designed to handle high volumes of timestamped data.
-The database is listening on port `8086`, which should be published to the host machine.
+- One running an availability agent that will monitor the availability of your [NetflixMovieCatalog][NetflixMovieCatalog] app. 
+- Another for [Prometheus](https://prometheus.io/) which collects availability monitoring results and stores them.
+- And a third for [Grafana](https://grafana.com/) which visualizes the availability results. 
 
-Grafana is an open-source platform for data visualization and monitoring
-The server is listening on port `3000`, which should be published to the host machine as well.
+We'll use docker run commands to launch each container and guide you through accessing the system.
 
-**No need** to install the InfluxDB or Grafana on your system, as they will be run as containers in pre-built images.
-Before you run the availability test script, let's run the [InfluxDB container](https://hub.docker.com/_/influxdb) and the [Grafana container](https://hub.docker.com/r/grafana/grafana-oss).
+The goal is to monitor the availability of your NetflixMovieCatalog using a simple Python app, collect the availability result metrics by Prometheus, and visualize them in Grafana.
 
-1. Run the InfluxDB container first. **You should run a specific image version:** `influxdb:1.8.10`.
-   In the `docker run` command, define the `INFLUXDB_ADMIN_USER` and `INFLUXDB_ADMIN_PASSWORD` with a custom admin user and password of your choice.
-   Furthermore, define `INFLUXDB_HTTP_AUTH_ENABLED` to be equal to `true`.
+First, let's start the availability agent, which is based in the [alonithuji/availability-agent:v0.0.1](https://hub.docker.com/r/alonithuji/availability-agent) image:
 
-2. In order to write data to InfluxDB, we need to create a database first. In another new terminal session, create a database named `hosts_metrics` in which the test data will be stored. To do so, perform the following POST HTTP request:
-
-```shell
-curl -X POST 'http://localhost:8086/query' -u <your-username>:<your-password> --data-urlencode "q=CREATE DATABASE hosts_metrics"
+```bash
+docker run -d --name availability-agent -e TARGET_HOST=http://your-host.com -p 8000:8000 availability/agent:latest
 ```
-Upon successful creation, you'll get the following output: `{"results":[{"statement_id":0}]}`.
 
-3. Next, run the Grafana container: `docker run -d --name=grafana -p 3000:3000 grafana/grafana`.
-   After initialization, visit your server in http://localhost:3000.
-    1. Default username **and** password is `admin`.
-    2. Now we want to integrate InfluxDB as a data source in Grafana. On the left menu, under **Connections** button, click **Data sources**.
-    3. In the opened configuration console, choose **Add data source**, then choose **InfluxDB**.
-    4. In the data source setting page, under **HTTP** section **URL** field, enter influxDB url: `http://<influc-db-container-ip>:8086`.
-    5. In **Auth** section, turn on the **Basic auth** toggle, and enter the InfluxDB username and password in the appropriate fields below.
-    6. In **InfluxDB Details** section, under **Database** enter your db name: `hosts_metrics`.
-    7. Finally, click **Save & Test**, and make sure you get the _Data source is working_ message.
+While changing `http://your-host.com` to the domain/IP address of your NetflixMovieCatalog app. 
 
-4. Now you are ready to run the availability test script. The code is available under `availability_agent/agent.sh` in our course repo.
-   The script monitors the hosts specified in the `hosts` file, and write the results into InfluxDB. Add to the `hosts` the IP address of your EC2 instance running the NetflixMovieCatalog app.
+- `--name`: Assigns a name to the container.
+- `-e TARGET_HOST`: Sets an environment variable `TARGET_HOST` which specifies the URL to be monitored.
+- `-p 8081:8081`: Maps port 8081 on the container to your host.
+- `-d`: Runs the container in the background.
 
-   The `agent.sh` script expects 3 environment variable to be available:
-    - `DB_USERNAME` - your InfluxDB username
-    - `DB_PASSWORD` - your InfluxDB password
-    - `INFLUXDB_URL` - your InfluxDB URL (including port).
+To check that the container is running successfully, perform:
+
+```bash
+curl http://localhost:8081/metrics
+```
+
+If everything was set up properly, the app is accessing the `TARGET_HOST` URL, and returns the **latency** took to access `TARGET_HOST`, or `0` if the host is not available, as follows:
+
+- When `TARGET_HOST=https://www.google.com`: 
+
+   ```text
+   host_availability{host="https://www.google.com"} 0.7910683155059814
+   ```
+
+- When `TARGET_HOST=https://not-real-host`:
+  ```text
+  host_availability{host="https://not-real-host"} 0.0
+  ```
+
+The printed format is fit to be read by Prometheus.
+
+Now we want to collect the availability metrics by Prometheus, a system that collects metrics from various services and stores them in a time-series database.
+
+In order to configure prometheus to scrape your availability agent container (or any other target), you have to create a file named `prometheus.yml`:
+
+```yaml
+scrape_configs:
+  - job_name: 'availability_monitor'
+    scrape_interval: 5s           # Scrapes every 15 seconds
+    scrape_timeout: 5s            # Timeout for each scrape request
+    static_configs:
+      - targets: ['<availability-agent-ip>:8081']
+```
+
+As can be seen, we'll configure Prometheus to scrape 1 target named `availability_monitor`, every 5 seconds. 
+The address of the target should be the IP address of your running availability agent container, you can inspect the container and find the IP:
+
+```bash
+docker inspect availability-agent
+```
+
+> [!NOTE]
+> Why **can't** we use `http://localhost:8081` as the address of your availability agent container?
+
+Let's run the prometheus container by performing the following command **from the same directory where your `prometheus.yml` was created on your host machine**:
+
+```bash
+docker run -d --name prometheus -p 9090:9090 -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+```
+
+`-p 9090:9090`: Maps port `9090` on the container (Prometheus web UI) to port 9090 on your host.
+`-v`: Mounts your prometheus configuration file (`$(pwd)/prometheus.yml`) into the container, where prometheus expect to find it (`/etc/prometheus/prometheus.yml`).
+
+Great. Now prometheus collects and stores the availability metrics of your host. 
+
+Next, run Grafana, which will visualize the metrics stored in Prometheus.
+
+```bash
+docker run -d --name grafana -p 3000:3000 grafana/grafana
+```
+
+- `-p 3000:3000`: Maps port 3000 (Grafana web UI) from the container to your host.
+
+Open your browser and visit http://localhost:3000. The default username and password are both `admin`.
+
+- Set up Prometheus data source in Grafana:
+  - Log into Grafana.
+  - On the left panel, click **Connections** → **Data sources** → **Add data source**.
+  - Select **Prometheus** and enter the URL: `http://<prometheus-container-ip>:9090`.
+  - Click **Save & Test**.
+- On the left panel enter the **Explore** panel and try to get a graph of availability metrics over time. 
+
+
+![availabilityMonitor][docker_grafana-ts]
+
    
-   On your host machine, run the script in a terminal session. 
-
-5. Let's visualize the results in Grafana. In the grafana server, click the **Explore** button. In the exploration panel, build a graph of the test results over time. Your graph should look similar to the bellow screenshot.   
-   ![availabilityMonitor][docker_grafana-ts]
-
-
-### :pencil2: Communication between containers and the internet
-
-Run two [`ubuntu`](https://hub.docker.com/_/ubuntu) containers named `ubuntu1` and `ubuntu2`.
-Use the `-it` flags to make an interactive interaction with the running containers using a tty terminal.
-
-Your goal is to be able to successfully `ping` the `ubuntu1` container from `ubuntu2`, i.e. to verify communication between the two containers.
-Install ping if needed, `inspect` the containers to discover their IP addresses.
-
-
 [docker_grafana-ts]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/docker_grafana-ts.png
+[NetflixMovieCatalog]: https://github.com/exit-zero-academy/NetflixMovieCatalog

@@ -1,0 +1,9 @@
+scrape_configs:
+  - job_name: 'availability_monitor'
+    scrape_interval: 5s           # Scrapes every 15 seconds
+    scrape_timeout: 5s            # Timeout for each scrape request
+    static_configs:
+      - targets: ['<availability-agent-ip>:8081']
+
+
+
