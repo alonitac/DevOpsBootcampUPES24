@@ -82,7 +82,7 @@ You are highly encouraged to complete the tutorials and projects by order, as ea
  <td>Linux and Bash</td>
  <td><a href="tutorials/bash_techniques.md">Bash techniques</a></td>
  <td align="center"></td>
- <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/bash_techniques.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsBootcampUPES24/multichoice-questions/bash_techniques.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/bash_techniques.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
 </tr>
 
