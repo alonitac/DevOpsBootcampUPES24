@@ -136,6 +136,15 @@ Netflix API. Then we deploy the app in a virtual machine in AWS and expose it pu
  <td align="center"></td>
 </tr>
 
+<tr>
+ <td>9</td>
+ <td>IaC</td>
+ <td><a href="tutorials/IaC_terraform_basics.md">IaC with Terraform (brief)</a></td>
+ <td align="center">&nbsp;</td>
+ <td align="center"></td>
+ <td align="center"><a href="tutorials/IaC_terraform_basics.md#exercises"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/pen.png" /></a></td>
+</tr>
+
 <tr><td colspan="6" align="center">
 <br><b>Webservers, the CI/CD pipeline</b><br>
 We deploy the NetflixMovieCatalog app in an EC2 instance behind an Nginx reverse proxy, and build a simple CI/CD pipeline for the NetflixMovieCatalog app.
