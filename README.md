@@ -7,10 +7,6 @@ This README contains information on the schedule, materials, exercises and proje
 
 </div>
 
-## Mid-course Feedback
-
-![](docs/qr.png)
-
 ## AWS Shared Account 
 
 https://700935310038.signin.aws.amazon.com/console
