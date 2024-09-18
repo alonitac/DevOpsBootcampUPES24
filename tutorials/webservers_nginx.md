@@ -41,6 +41,12 @@ sudo apt update
 sudo apt install nginx
 ```
 
+Start the service by: 
+
+```bash
+sudo systemctl start nginx
+```
+
 Make sure the Nginx service is up and running:
 
 ```console
