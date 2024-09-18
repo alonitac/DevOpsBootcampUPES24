@@ -5,7 +5,7 @@
 Throughout this bootcamp, you've been building and deploying components of the Netflix stack.
 Now, it's time to bring everything together into a fully functional system.
 
-![][../docs/final-arc.png]
+![](../docs/final-arc.png)
 
 
 ## Objectives
