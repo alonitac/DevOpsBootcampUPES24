@@ -270,7 +270,7 @@ The goal is to monitor the availability of your NetflixMovieCatalog using a simp
 First, let's start the availability agent, which is based in the [alonithuji/availability-agent:v0.0.1](https://hub.docker.com/r/alonithuji/availability-agent) image:
 
 ```bash
-docker run -d --name availability-agent -e TARGET_HOST=http://your-host.com -p 8000:8000 availability/agent:latest
+docker run -d --name availability-agent -e TARGET_HOST=http://your-host.com -p 8000:8000  alonithuji/availability-agent:v0.0.1
 ```
 
 While changing `http://your-host.com` to the domain/IP address of your NetflixMovieCatalog app. 
