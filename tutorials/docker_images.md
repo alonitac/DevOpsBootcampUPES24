@@ -196,13 +196,6 @@ In our example, we specify the command to run when the container starts, which i
 
 Push the built `netflix_movie_catalog:0.0.1` image to your registry.
 
-### :pencil2: Build the availability agent
-
-Build the availability agent app located in `availability_agent` (this app used in an exercise in Containers tutorial).
-
-The `Dockerfile` is already written. Push the image to DockerHub. 
-
-
 ### :pencil2: Build the Netflix Frontend app
 
 1. Build a Docker image of the following app: https://github.com/exit-zero-academy/NetflixFrontend. 
@@ -214,6 +207,11 @@ The `Dockerfile` is already written. Push the image to DockerHub.
 3. Deploy your image in a fresh new `*.nano` Ubuntu EC2 instance (pull the image and run it). 
 4. In your Nginx instance, create a new `server` which routes traffic to your Netflix Frontend app. The app should be accessible from your domain, e.g.: http://netflix.devops-days-upes.com.
 
+### :pencil2: Build the availability agent
+
+Build the availability agent app located in `availability_agent` (this app used in an exercise in Containers tutorial).
+
+The `Dockerfile` is already written. Push the image to DockerHub. 
 
 
 [NetflixMovieCatalog]: https://github.com/exit-zero-academy/NetflixMovieCatalog
